@@ -8,6 +8,10 @@
 [![CodelyTV](https://img.shields.io/badge/codely-tv-green.svg?style=flat-square)](codely.tv)
 [![License](https://img.shields.io/github/license/CodelyTV/scala-http-api.svg?style=flat-square)](LICENSE)
 
+Repository containing all the automations required to setup your MacOS in just a feww seconds afrter a fresh install.
+
+Feel free to explore the repository and get anything you need 😬
+
 ## Instructions
 
 1. Read the `Contents` section of this readme in order to grasp which kind of settings and tools it provides
