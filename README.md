@@ -17,14 +17,23 @@ Feel free to explore the repository and get anything you need 😬
 1. Read the `Contents` section of this readme in order to grasp which kind of settings and tools it provides
 2. Clone this repository: `git clone https://github.com/CodelyTV/dotfiles.git codelytv_dotfiles`
 2. Move to the project root directory: `cd codelytv_dotfiles`
-3. Modify the scripts in order to suite your needs
+3. Modify the scripts and dotfiles in order to suite your needs
 4. Execute the scripts from the terminal:
     * `.install_macos_apps.sh`
     * `.adjust_macos_settings.sh`
+5. Copy the dotfiles you're interested into
 
 ## Contents
 
 You'll find some self-explanatory files in this repo containing comments on what they do, however, here you have a brief explanation of each on of them.
+
+### Shell related dotfiles
+
+* `.zshrc`: Main config for ZSH shell (loads common `.profile`)
+* `.bashrc`: Main config for Bash shell (loads common `.profile`)
+* `.profile`: Common profile between the different shells in order to have all the functionalities in both of them. This file loads `.aliases` and `.functions`
+* `.aliases`: Common command aliases in order to save some characters 😬
+* `.functions`: Common shell functions
 
 ### `install_macos_apps.sh`
 

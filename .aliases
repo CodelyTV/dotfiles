@@ -1,0 +1,16 @@
+# 📁 Directories
+
+alias cdd='cd ~/dev'
+alias cdw="cdd; cd work"
+alias cdc='cdw; cd codelytv'
+
+# ⚙️ Utilities
+
+alias reload="exec ${SHELL} -l"
+alias copy_ssh="pbcopy < $HOME/.ssh/id_rsa.pub"
+alias flush_dns="sudo killall -HUP mDNSResponder"
+
+# 📱 Apps
+
+# Update process based on https://docs.brew.sh/FAQ
+alias upda='brew update; brew outdated; brew upgrade; brew cleanup; mas upgrade'
