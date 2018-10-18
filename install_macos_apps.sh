@@ -73,6 +73,8 @@ declare -a mas_apps=(
   '1278508951' # Trello
   '441258766' # Magnet
   '408981434' # iMovie
+  '715464874' # Disk Map
+  '587512244' # Kaleidoscope
 )
 
 for app in "${mas_apps[@]}"; do
