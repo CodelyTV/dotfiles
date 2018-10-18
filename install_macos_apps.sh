@@ -23,15 +23,19 @@ declare -a brew_cask_apps=(
   'google-backup-and-sync'
   'slack'
   'whatsapp'
+  'docker'
   'iterm2'
   'sourcetree'
   'jetbrains-toolbox'
-  'docker'
   'sublime-text'
+  'visual-studio-code'
   'sequel-pro'
   'noti'
   '1password6'
   'transmit'
+  'transmission'
+  'paragon-ntfs'
+  'caffeine'
 )
 
 for app in "${brew_cask_apps[@]}"; do
@@ -45,7 +49,10 @@ declare -a brew_cli_tools=(
   'tree'
   'zsh'
   'zsh-syntax-highlighting'
+  'zsh-autosuggestions'
+  'autojump'
   'mas'
+  'tldr'
   'git'
   'php'
   'sbt'
@@ -65,13 +72,23 @@ declare -a mas_apps=(
   '540348655' # Monosnap
   '1278508951' # Trello
   '441258766' # Magnet
+  '408981434' # iMovie
 )
 
 for app in "${mas_apps[@]}"; do
   brew install "$app"
 done
 
-# Other apps (WIP)
+###############################################################################
+# Configure installed apps                                                    #
+###############################################################################
+
+# Set ZSH as the default shell
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+###############################################################################
+# Install other apps (WIP)                                                    #
+###############################################################################
 
 # https://www.macbartender.com/gettingstarted/installing-bartender/
 # Photoshop
