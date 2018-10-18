@@ -1,9 +1,9 @@
-# CodelyTV dotfiles
+# 🚀 CodelyTV dotfiles
 
 <img src="http://codely.tv/wp-content/uploads/2016/05/cropped-logo-codelyTV.png" align="left" width="192px" height="192px"/>
 <img align="left" width="0" height="192px" hspace="10"/>
 
-> 🚀 Speedup your MacOS setup with this fine tuning settings
+> 🐢   💨 Speedup your MacOS setup with this fine tuning settings
 
 [![CodelyTV](https://img.shields.io/badge/codely-tv-green.svg?style=flat-square)](codely.tv)
 [![License](https://img.shields.io/github/license/CodelyTV/scala-http-api.svg?style=flat-square)](LICENSE)
@@ -12,7 +12,7 @@ Repository containing all the automations required to setup your MacOS in just a
 
 Feel free to explore the repository and get anything you need 😬
 
-## Instructions
+## ☝️ Instructions
 
 1. Read the `Contents` section of this readme in order to grasp which kind of settings and tools it provides
 2. Clone this repository: `git clone https://github.com/CodelyTV/dotfiles.git codelytv_dotfiles`
@@ -23,11 +23,11 @@ Feel free to explore the repository and get anything you need 😬
     * `.adjust_macos_settings.sh`
 5. Copy the dotfiles you're interested into
 
-## Contents
+## ✍️ Contents
 
 You'll find some self-explanatory files in this repo containing comments on what they do, however, here you have a brief explanation of each on of them.
 
-### Shell related dotfiles
+### 💻 Shell dotfiles
 
 * `.zshrc`: Main config for ZSH shell (loads common `.profile`)
 * `.bashrc`: Main config for Bash shell (loads common `.profile`)
@@ -35,7 +35,12 @@ You'll find some self-explanatory files in this repo containing comments on what
 * `.aliases`: Common command aliases in order to save some characters 😬
 * `.functions`: Common shell functions
 
-### `install_macos_apps.sh`
+### 🐙 Git dotfiles
+
+* `.gitconfig`: Different settings for the Git CSV system such as including the following file 
+* `.gitignore_global`: Ignore rules to apply to every single repository (usefull to do not mess up the project `.gitignore` file with particularities of your development environment such as the `.DS_Store` files or your IDE settings)
+
+### 🍎 `install_macos_apps.sh`
 
 This script will install [Homebrew](https://brew.sh/). It's a package manager for MacOS, used to install some tools like `htop`, `ffmpeg`, `git`, `php`… you get the idea, Command Line Tools, programming languages, and so on. 
 
@@ -45,7 +50,7 @@ With these 2 command line tools, we'll be able to install and upgrade our apps w
 
 You can [check out the `install_macos_apps.sh` script](install_macos_apps.sh) in order to see the detailed list of the apps it will install, and modify it based on your needs, and [the available packages in Homebrew](https://formulae.brew.sh/formula/) and [Homebrew Cask apps](https://github.com/Homebrew/homebrew-cask/tree/master/Casks).
 
-### `adjust_macos_settings.sh`
+### 🎛️ `adjust_macos_settings.sh`
 
 This script will modify system preferences. We would recommend you to [take a look at the `adjust_macos_settings.sh` script](adjust_macos_settings.sh) in order to know the actual list of aspects it will modify. Here you have a brief list of them:
 
@@ -58,7 +63,7 @@ This script will modify system preferences. We would recommend you to [take a lo
 * Safari & WebKit: Allow hitting the Backspace key to go to the previous page + show full URL + disable automatic spelling corrections…
 * Others: Disable the sound effects on boot + always show scrollbars + disable automatic capitalization + Avoid creating .DS_Store files on network or USB volumes + Maximize windows with `Ctrl+alt+Cmd+f`…
 
-#### How to discover new domains and settings
+#### 🤔 How to discover new domains and settings
 
 You can explore your current settings on all the different applications just with a few commands:
 
@@ -67,7 +72,7 @@ You can explore your current settings on all the different applications just wit
 * Read the type of the setting you want to modify: `defaults read-type com.apple.finder NewWindowTargetPath`
 * Write your new value for the setting: `write com.apple.finder NewWindowTargetPath "file:///Users/your-username/"`
 
-#### How to automate settings changes 
+#### 🏃‍♂️ How to automate settings changes 
 
 The problem with the previous approach is that it could be a little verbose while showing you aaaaall the different settings an application has. So here's a quick tip on how to optimize the process for these settings which can be adjusted using the UI:
 
@@ -80,11 +85,11 @@ The problem with the previous approach is that it could be a little verbose whil
     * Alternativelly: `diff finder_defaults_before_ui_changes finder_defaults_after_ui_changes.json`
 * Save the modified keys and construct your `write` commands in order to automate it the next time. For instance: `write com.apple.finder NewWindowTargetPath "file:///Users/your-username/"`
 
-## Work In Progress
+## 👷‍♂️ Work In Progress
 
 As you can see, right now this repository only consists of these two simply files. The idea is to add new settings to it during my own setup process, and allow you to contribute to it 🙂
 
-## About
+## ℹ️ About
 
 This hopefully helpful repository has been developed by [CodelyTV](https://github.com/CodelyTV) and [contributors](https://github.com/CodelyTV/dotfiles/graphs/contributors).
 
@@ -98,12 +103,12 @@ We've used a lot of different sources to get some inspirations on the things to 
 * https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 * https://github.com/pawelgrzybek/dotfiles/blob/master/setup-macos.sh
 
-## Contributing
+## 🤝 Contributing
 
 It would be awesome to learn from your experience automating the setup of your environment. So please, feel free to send us your tips and tricks via Twitter ([@CodelyTV](https://twitter.com/CodelyTV)), or [opening an issue](https://github.com/CodelyTV/dotfiles/issues).
 
 We'll try to maintain this project as simple as possible (that is, not adding applications we won't use for instance), so we ask you to please consider opening an issue before working on a Pull Request. This way we can debate before wasting efforts 🙂
 
-## License
+## ⚖️ License
 
 The MIT License (MIT). Please see [License](LICENSE) for more information.

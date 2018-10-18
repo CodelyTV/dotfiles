@@ -1,0 +1,13 @@
+[user]
+	name = Your Name
+	email = your@email.com
+[core]
+	excludesfile = $HOME/.gitignore_global
+[difftool "sourcetree"]
+	cmd = code -n -w -d \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = code -n -w \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = $HOME/.stCommitMsg
