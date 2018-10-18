@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ###############################################################################
-# Dock                                                                        #
+# 📱 Dock
 ###############################################################################
 
 defaults write com.apple.dock autohide -bool true
@@ -30,7 +30,7 @@ defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-t
 killall Dock
 
 ###############################################################################
-# Mission Control                                                             #
+# 🎛 Mission Control
 ###############################################################################
 
 defaults write com.apple.dock expose-animation-duration -float 0.1
@@ -69,53 +69,60 @@ defaults write com.apple.dock wvous-br-corner -int 4
 defaults write com.apple.dock wvous-br-modifier -int 0
 
 ###############################################################################
-# Keyboard                                                                    #
+# ⌨️ Keyboard
 ###############################################################################
 
-defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
+defaults write -g KeyRepeat -int 3
+defaults write -g InitialKeyRepeat -int 15
 
 # Disable press-and-hold for keys in favour of key repeat
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+defaults write -g ApplePressAndHoldEnabled -bool false
 
 ###############################################################################
-# Mouse                                                                       #
+# 🖱️ Mouse
 ###############################################################################
 
 defaults write -g com.apple.mouse.scaling 5
 
 ###############################################################################
-# Trackpad                                                                    #
+# 💻 Trackpad
 ###############################################################################
+
+# Tracking Speed: from 0 to 3
+defaults write -g com.apple.trackpad.scaling -float 3
 
 # Enable tap to click for the current user and the login screen. (Don't have to press down on the trackpad -- just tap it.)
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+defaults write com.apple.AppleMultitouchTrackpad Clicking -int 1
+defaults -currentHost write -g com.apple.mouse.tapBehavior -int 1
+defaults write -g com.apple.mouse.tapBehavior -int 1
 
-# Trackpad: map bottom right corner to right-click
+# Trackpad: map two fingers tap to right-click
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
-defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
-defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
+defaults -currentHost write -g com.apple.trackpad.trackpadCornerClickBehavior -int 1
+defaults -currentHost write -g com.apple.trackpad.enableSecondaryClick -bool true
+defaults write com.apple.AppleMultitouchTrackpad TrackpadRightClick -int 1
 
 ###############################################################################
-# Finder                                                                      #
+# 🔍 Finder
 ###############################################################################
 
 defaults write com.apple.finder DisableAllAnimations -bool true
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+defaults write -g AppleShowAllExtensions -bool true
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
+defaults write com.apple.finder NewWindowTarget -string "PfDe"
+defaults write com.apple.finder NewWindowTargetPath -string 'file://$HOME/'
 defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
+defaults write com.apple.finder FinderSpawnTab -bool false
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
 
 # Enable spring loading for directories: https://www.youtube.com/watch?v=F9kdAxGe9SE
-defaults write NSGlobalDomain com.apple.springing.enabled -bool true
-defaults write NSGlobalDomain com.apple.springing.delay -float 0
+defaults write -g com.apple.springing.enabled -bool true
+defaults write -g com.apple.springing.delay -float 0
 
 # Automatically open a new Finder window when a volume is mounted
 defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
@@ -162,8 +169,12 @@ defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 killall Finder
 
+# Show Sidebar, but remove the Tags section.
+defaults write com.apple.finder ShowSidebar -bool true
+defaults write com.apple.finder ShowRecentTags -bool false
+
 ###############################################################################
-# Safari & WebKit                                                             #
+# 🌍 Safari & WebKit
 ###############################################################################
 
 # Allow hitting the Backspace key to go to the previous page in history
@@ -176,7 +187,7 @@ defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool 
 defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
 
 # Add a context menu item for showing the Web Inspector in web views
-defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+defaults write -g WebKitDeveloperExtras -bool true
 
 defaults write com.apple.Safari WebContinuousSpellCheckingEnabled -bool true
 defaults write com.apple.Safari WebAutomaticSpellingCorrectionEnabled -bool false
@@ -184,24 +195,33 @@ defaults write com.apple.Safari WarnAboutFraudulentWebsites -bool true
 defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
 defaults write com.apple.Safari InstallExtensionUpdatesAutomatically -bool true
 
+###############################################################################
+# 🍎 Mac App Store
+###############################################################################
+
+defaults write com.apple.appstore ShowDebugMenu -bool true
+defaults write com.apple.commerce AutoUpdate -bool true
+defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
+defaults write com.apple.SoftwareUpdate AutomaticDownload -int 1
+defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
 
 ###############################################################################
-# Others                                                                      #
+# 🎚️ Others
 ###############################################################################
 
 ### Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
-defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
-defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
-defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
-defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
-defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
-defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false
-defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+defaults write -g NSDocumentSaveNewDocumentsToCloud -bool false
+defaults write -g AppleShowScrollBars -string "Always"
+defaults write -g NSWindowResizeTime -float 0.001
+defaults write -g NSNavPanelExpandedStateForSaveMode -bool true
+defaults write -g NSNavPanelExpandedStateForSaveMode2 -bool true
+defaults write -g NSAutomaticCapitalizationEnabled -bool false
+defaults write -g NSAutomaticDashSubstitutionEnabled -bool false
+defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
+defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Restart automatically if the computer freezes
 sudo systemsetup -setrestartfreeze on
@@ -210,8 +230,11 @@ sudo systemsetup -setrestartfreeze on
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 
-## Shortcut to maximize window
+# Shortcut to maximize window
 defaults write -g NSUserKeyEquivalents -dict-add "Zoom" -string "@~^f"
+
+# Font rendering for non-retina displays. More info: https://github.com/Microsoft/vscode/issues/51132
+defaults write -g CGFontRenderingFontSmoothingDisabled -bool false
 
 # Spotlight preferences (do not search inside external drives + limit number of things to index) (WIP)
 # Night shift (WIP)
