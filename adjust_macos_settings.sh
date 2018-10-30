@@ -266,8 +266,6 @@ defaults write com.apple.dock persistent-apps -array-add '{
 # Add a spacer to the right side of the Dock (where the Trash is)
 #defaults write com.apple.dock persistent-others -array-add '{tile-data={}; tile-type="spacer-tile";}'
 
-killall Dock
-
 ###############################################################################
 # 🎛 Mission Control
 ###############################################################################
@@ -291,21 +289,23 @@ defaults write com.apple.dock mru-spaces -bool false
 # 11: Launchpad
 # 12: Notification Center
 
-# Top left screen corner → Mission Control
-defaults write com.apple.dock wvous-tl-corner -int 2
+# Top left screen corner → Show application windows
+defaults write com.apple.dock wvous-tl-corner -int 3
 defaults write com.apple.dock wvous-tl-modifier -int 0
 
-# Top right screen corner → Notification Center
-defaults write com.apple.dock wvous-tr-corner -int 12
+# Top right screen corner → Mission Control
+defaults write com.apple.dock wvous-tr-corner -int 2
 defaults write com.apple.dock wvous-tr-modifier -int 0
 
-# Bottom left screen corner → Show application windows
-defaults write com.apple.dock wvous-bl-corner -int 3
+# Bottom left screen corner → Notification Center
+defaults write com.apple.dock wvous-bl-corner -int 12
 defaults write com.apple.dock wvous-bl-modifier -int 0
 
 # Bottom right screen corner → Desktop
 defaults write com.apple.dock wvous-br-corner -int 4
 defaults write com.apple.dock wvous-br-modifier -int 0
+
+killall Dock
 
 ###############################################################################
 # ⌨️ Keyboard
