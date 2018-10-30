@@ -557,7 +557,7 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 defaults write -g CGFontRenderingFontSmoothingDisabled -bool false
 
 # Set computer name (as done via System Preferences → Sharing)
-COMPUTER_NAME="Somachigun"
+COMPUTER_NAME="YourComputerName"
 
 sudo scutil --set ComputerName $COMPUTER_NAME
 sudo scutil --set HostName $COMPUTER_NAME
