@@ -19,6 +19,10 @@ declare -a brew_cask_apps=(
   'istat-menus'
   'rocket'
   'contexts'
+  'paragon-ntfs'
+  'noti'
+  'caffeine'
+  'bartender'
   'dropbox'
   'google-backup-and-sync'
   'slack'
@@ -30,12 +34,9 @@ declare -a brew_cask_apps=(
   'sublime-text'
   'visual-studio-code'
   'sequel-pro'
-  'noti'
   '1password6'
   'transmit'
   'transmission'
-  'paragon-ntfs'
-  'caffeine'
 )
 
 for app in "${brew_cask_apps[@]}"; do
@@ -47,6 +48,7 @@ declare -a brew_cli_tools=(
   'youtube-dl'
   'ffmpeg'
   'tree'
+  'parallel'
   'zsh'
   'zsh-syntax-highlighting'
   'zsh-autosuggestions'
@@ -75,6 +77,7 @@ declare -a mas_apps=(
   '408981434' # iMovie
   '715464874' # Disk Map
   '587512244' # Kaleidoscope
+  '784801555' # OneNote
 )
 
 for app in "${mas_apps[@]}"; do
@@ -88,11 +91,11 @@ done
 # Set ZSH as the default shell
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+# Run the Paragon NTFS installer
+open /usr/local/Caskroom/paragon-ntfs/15/FSInstaller.app
+
 ###############################################################################
 # Install other apps (WIP)                                                    #
 ###############################################################################
-
-# https://www.macbartender.com/gettingstarted/installing-bartender/
-# Photoshop
 
 # Fonts (WIP)
