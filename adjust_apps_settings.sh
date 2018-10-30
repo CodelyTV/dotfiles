@@ -4,6 +4,9 @@
 # 🤝 Transmission
 ###############################################################################
 
+mkdir $HOME/Downloads/torrents
+mkdir $HOME/Downloads/torrents/tmp
+
 defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
 defaults write org.m0k.transmission DownloadAsk -bool false
 defaults write org.m0k.transmission MagnetOpenAsk -bool false
