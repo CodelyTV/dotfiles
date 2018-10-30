@@ -317,11 +317,28 @@ defaults write -g InitialKeyRepeat -int 15
 # Disable press-and-hold for keys in favour of key repeat
 defaults write -g ApplePressAndHoldEnabled -bool false
 
+# Shortcut to maximize window
+defaults write -g NSUserKeyEquivalents -dict-add "Zoom" -string "@~^f"
+
+# Disable automatic modifications of entered text
+defaults write -g NSAutomaticCapitalizationEnabled -bool false
+defaults write -g NSAutomaticDashSubstitutionEnabled -bool false
+defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
+defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
+defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
+
 ###############################################################################
 # 🖱️ Mouse
 ###############################################################################
 
+# Increase speed
 defaults write -g com.apple.mouse.scaling 5
+
+# Enable secondary button on click
+defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseButtonMode TwoButton
+
+# Enable swipe with one single finger gesture to go back while browsing
+defaults write com.apple.driver.AppleBluetoothMultitouch.mouse MouseOneFingerDoubleTapGesture 1
 
 ###############################################################################
 # 💻 Trackpad
@@ -448,19 +465,11 @@ defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
 # 🎚️ Others
 ###############################################################################
 
-### Disable the sound effects on boot
+# Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
 
-defaults write -g NSDocumentSaveNewDocumentsToCloud -bool false
 defaults write -g AppleShowScrollBars -string "Always"
 defaults write -g NSWindowResizeTime -float 0.001
-defaults write -g NSNavPanelExpandedStateForSaveMode -bool true
-defaults write -g NSNavPanelExpandedStateForSaveMode2 -bool true
-defaults write -g NSAutomaticCapitalizationEnabled -bool false
-defaults write -g NSAutomaticDashSubstitutionEnabled -bool false
-defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
-defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
-defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 
 # Restart automatically if the computer freezes
 sudo systemsetup -setrestartfreeze on
@@ -468,9 +477,6 @@ sudo systemsetup -setrestartfreeze on
 # Avoid creating .DS_Store files on network or USB volumes
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
-
-# Shortcut to maximize window
-defaults write -g NSUserKeyEquivalents -dict-add "Zoom" -string "@~^f"
 
 # Font rendering for non-retina displays. More info: https://github.com/Microsoft/vscode/issues/51132
 defaults write -g CGFontRenderingFontSmoothingDisabled -bool false
