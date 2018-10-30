@@ -556,6 +556,13 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # Font rendering for non-retina displays. More info: https://github.com/Microsoft/vscode/issues/51132
 defaults write -g CGFontRenderingFontSmoothingDisabled -bool false
 
-# Spotlight preferences (do not search inside external drives + limit number of things to index) (WIP)
-# Night shift (WIP)
-# Energy saver > Wake for Wi-Fi network disabled (WIP)
+# Set computer name (as done via System Preferences → Sharing)
+COMPUTER_NAME="Somachigun"
+
+sudo scutil --set ComputerName $COMPUTER_NAME
+sudo scutil --set HostName $COMPUTER_NAME
+sudo scutil --set LocalHostName $COMPUTER_NAME
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $COMPUTER_NAME
+
+# Disable Wake for Wi-Fi network / Wake on Demand (more info: https://apple.stackexchange.com/questions/73764/what-is-the-wake-for-wifi-network-access-setting-in-energy-preferences)
+
