@@ -100,7 +100,9 @@ We've used a lot of different sources to get some inspirations on the things to 
 * https://github.com/alexramirez/mac-setup
 * https://github.com/alrra/dotfiles
 * https://github.com/boochtek/mac_config/blob/master/trackpad.sh
+* https://github.com/dstroot/.osx
 * https://github.com/mathiasbynens/dotfiles/blob/master/.macos
+* https://github.com/MoOx/setup
 * https://github.com/pawelgrzybek/dotfiles/blob/master/setup-macos.sh
 
 ## 🤝 Contributing
