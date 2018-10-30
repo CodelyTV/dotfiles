@@ -361,7 +361,7 @@ defaults -currentHost write -g com.apple.trackpad.enableSecondaryClick -bool tru
 defaults write com.apple.AppleMultitouchTrackpad TrackpadRightClick -int 1
 
 ###############################################################################
-# 🔍 Finder
+# 📂 Finder
 ###############################################################################
 
 defaults write com.apple.finder DisableAllAnimations -bool true
@@ -375,6 +375,41 @@ defaults write com.apple.finder ShowStatusBar -bool true
 defaults write com.apple.finder FinderSpawnTab -bool false
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
+
+# Toolbar icons
+defaults write com.apple.finder 'NSToolbar Configuration Browser' '{
+    "TB Default Item Identifiers" =     (
+        "com.apple.finder.BACK",
+        NSToolbarFlexibleSpaceItem,
+        "com.apple.finder.SWCH",
+        "com.apple.finder.ARNG",
+        "com.apple.finder.ACTN",
+        "com.apple.finder.SHAR",
+        "com.apple.finder.LABL",
+        NSToolbarFlexibleSpaceItem,
+        NSToolbarFlexibleSpaceItem,
+        "com.apple.finder.SRCH"
+    );
+    "TB Display Mode" = 2;
+    "TB Icon Size Mode" = 1;
+    "TB Is Shown" = 1;
+    "TB Item Identifiers" =     (
+        "com.apple.finder.BACK",
+        NSToolbarFlexibleSpaceItem,
+        "com.apple.finder.SWCH",
+        "com.apple.finder.ARNG",
+        NSToolbarSpaceItem,
+        "com.apple.finder.NFLD",
+        NSToolbarFlexibleSpaceItem,
+        "com.apple.finder.SRCH"
+    );
+    "TB Size Mode" = 1;
+}'
+
+# Modify behaviour for "Save" modal window
+defaults write -g NSDocumentSaveNewDocumentsToCloud -bool false
+defaults write -g NSNavPanelExpandedStateForSaveMode -bool true
+defaults write -g NSNavPanelExpandedStateForSaveMode2 -bool true
 
 # Enable spring loading for directories: https://www.youtube.com/watch?v=F9kdAxGe9SE
 defaults write -g com.apple.springing.enabled -bool true
