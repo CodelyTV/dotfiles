@@ -78,7 +78,7 @@ declare -a mas_apps=(
 )
 
 for app in "${mas_apps[@]}"; do
-  brew install "$app"
+  mas install "$app"
 done
 
 ###############################################################################
