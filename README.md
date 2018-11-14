@@ -14,16 +14,14 @@ Feel free to explore the repository and get anything you need 😬
 
 ## ☝️ Instructions
 
->WIP: Divide this section on how to bootstrap your environment with this dotenv files (download via curl and executing the scripts because you don't have git yet)
-
-1. Read the `Contents` section of this readme in order to grasp which kind of settings and tools it provides
+1. Read the `Contents` section of this readme in order to grasp which kind of settings and tools could be useful for you
 2. Clone this repository: `git clone https://github.com/CodelyTV/dotfiles.git codelytv_dotfiles`
 2. Move to the project root directory: `cd codelytv_dotfiles`
 3. Modify the scripts and dotfiles in order to suite your needs
 4. Execute the scripts from the terminal:
-    * `.install_macos_apps.sh`
-    * `.adjust_macos_settings.sh`
-5. Copy the dotfiles you're interested into
+    * [`.install_macos_apps.sh`](install_macos_apps.sh)
+    * [`.adjust_macos_settings.sh`](adjust_macos_settings.sh)
+5. Copy or create the symbolic links to the dotfiles you're interested in as shown in the `Contents` section
 
 ## ✍️ Contents
 
@@ -31,24 +29,24 @@ You'll find some self-explanatory files in this repo containing comments on what
 
 ### 💻 Shell dotfiles
 
-* `.aliases`: Common command aliases in order to save some characters 😬
-* `.bashrc`: Main config for Bash shell (loads common `.profile`)
-* `.functions`: Common shell functions (key difference from `.aliases`: functions will receive an argument)
-* `.profile`: Common profile between the different shells in order to have all the functionalities in both of them. This file loads `.aliases` and `.functions`
-* `.zshrc`: Main config for ZSH shell (loads common `.profile`)
+* [`.aliases`](.aliases): Common command aliases in order to save some characters 😬
+* [`.bashrc`](.bashrc): Main config for Bash shell (loads common `.profile`)
+* [`.functions`](.functions): Common shell functions (key difference from `.aliases`: functions will receive an argument)
+* [`.profile`](.profile): Common profile between the different shells in order to have all the functionalities in both of them. This file loads `.aliases` and `.functions`
+* [`.zshrc`](.zshrc): Main config for ZSH shell (loads common `.profile`)
 
 ### 🐙 Git dotfiles
 
-* `.gitconfig`: Different settings for the Git CSV system such as including the following file 
-* `.gitignore_global`: Ignore rules to apply to every single repository (usefull to do not mess up the project `.gitignore` file with particularities of your development environment such as the `.DS_Store` files or your IDE settings)
+* [`.gitconfig`](.gitconfig): Different settings for the Git CSV system such as including the following file 
+* [`.gitignore_global`](.gitignore_global): Ignore rules to apply to every single repository (usefull to do not mess up the project `.gitignore` file with particularities of your development environment such as the `.DS_Store` files or your IDE settings)
 
 ### 📱 Other apps dotfiles
 
-* `.vscode_settings.json`: You will have to like to it with something like: `$ ln -s paht_to_this_repo_clone/.vscode_settings.json ~/Library/Application\ Support/Code/User/settings.json`
+* [`.vscode_settings.json`](.vscode_settings.json): You can grab the settings you want to, or create a symbolic link to this file with something like: `$ ln -s paht_to_this_repo_clone/.vscode_settings.json ~/Library/Application\ Support/Code/User/settings.json`
 
 ### 🤖 Shell scripts
 
-#### 🍎 `install_macos_apps.sh`
+#### 🍎 [`install_macos_apps.sh`](install_macos_apps.sh)
 
 This script will install [Homebrew](https://brew.sh/). It's a package manager for MacOS, used to install some tools like `htop`, `ffmpeg`, `git`, `php`… you get the idea, Command Line Tools, programming languages, and so on. 
 
@@ -58,7 +56,7 @@ With these 2 command line tools, we'll be able to install and upgrade our apps w
 
 You can [check out the `install_macos_apps.sh` script](install_macos_apps.sh) in order to see the detailed list of the apps it will install, and modify it based on your needs, and [the available packages in Homebrew](https://formulae.brew.sh/formula/) and [Homebrew Cask apps](https://github.com/Homebrew/homebrew-cask/tree/master/Casks).
 
-#### 🎛️ `adjust_macos_settings.sh`
+#### 🎛️ [`adjust_macos_settings.sh`](adjust_macos_settings.sh)
 
 This script will modify system preferences. We would recommend you to [take a look at the `adjust_macos_settings.sh` script](adjust_macos_settings.sh) in order to know the actual list of aspects it will modify. Here you have a brief list of them:
 
