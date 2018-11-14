@@ -14,6 +14,8 @@ Feel free to explore the repository and get anything you need 😬
 
 ## ☝️ Instructions
 
+>WIP: Divide this section on how to bootstrap your environment with this dotenv files (download via curl and executing the scripts because you don't have git yet)
+
 1. Read the `Contents` section of this readme in order to grasp which kind of settings and tools it provides
 2. Clone this repository: `git clone https://github.com/CodelyTV/dotfiles.git codelytv_dotfiles`
 2. Move to the project root directory: `cd codelytv_dotfiles`
@@ -29,18 +31,24 @@ You'll find some self-explanatory files in this repo containing comments on what
 
 ### 💻 Shell dotfiles
 
-* `.zshrc`: Main config for ZSH shell (loads common `.profile`)
-* `.bashrc`: Main config for Bash shell (loads common `.profile`)
-* `.profile`: Common profile between the different shells in order to have all the functionalities in both of them. This file loads `.aliases` and `.functions`
 * `.aliases`: Common command aliases in order to save some characters 😬
-* `.functions`: Common shell functions
+* `.bashrc`: Main config for Bash shell (loads common `.profile`)
+* `.functions`: Common shell functions (key difference from `.aliases`: functions will receive an argument)
+* `.profile`: Common profile between the different shells in order to have all the functionalities in both of them. This file loads `.aliases` and `.functions`
+* `.zshrc`: Main config for ZSH shell (loads common `.profile`)
 
 ### 🐙 Git dotfiles
 
 * `.gitconfig`: Different settings for the Git CSV system such as including the following file 
 * `.gitignore_global`: Ignore rules to apply to every single repository (usefull to do not mess up the project `.gitignore` file with particularities of your development environment such as the `.DS_Store` files or your IDE settings)
 
-### 🍎 `install_macos_apps.sh`
+### 📱 Other apps dotfiles
+
+* `.vscode_settings.json`: You will have to like to it with something like: `$ ln -s paht_to_this_repo_clone/.vscode_settings.json ~/Library/Application\ Support/Code/User/settings.json`
+
+### 🤖 Shell scripts
+
+#### 🍎 `install_macos_apps.sh`
 
 This script will install [Homebrew](https://brew.sh/). It's a package manager for MacOS, used to install some tools like `htop`, `ffmpeg`, `git`, `php`… you get the idea, Command Line Tools, programming languages, and so on. 
 
@@ -50,7 +58,7 @@ With these 2 command line tools, we'll be able to install and upgrade our apps w
 
 You can [check out the `install_macos_apps.sh` script](install_macos_apps.sh) in order to see the detailed list of the apps it will install, and modify it based on your needs, and [the available packages in Homebrew](https://formulae.brew.sh/formula/) and [Homebrew Cask apps](https://github.com/Homebrew/homebrew-cask/tree/master/Casks).
 
-### 🎛️ `adjust_macos_settings.sh`
+#### 🎛️ `adjust_macos_settings.sh`
 
 This script will modify system preferences. We would recommend you to [take a look at the `adjust_macos_settings.sh` script](adjust_macos_settings.sh) in order to know the actual list of aspects it will modify. Here you have a brief list of them:
 
@@ -63,7 +71,7 @@ This script will modify system preferences. We would recommend you to [take a lo
 * Safari & WebKit: Allow hitting the Backspace key to go to the previous page + show full URL + disable automatic spelling corrections…
 * Others: Disable the sound effects on boot + always show scrollbars + disable automatic capitalization + Avoid creating .DS_Store files on network or USB volumes + Maximize windows with `Ctrl+alt+Cmd+f`…
 
-#### 🤔 How to discover new domains and settings
+##### 🤔 How to discover new domains and settings
 
 You can explore your current settings on all the different applications just with a few commands:
 
@@ -72,7 +80,7 @@ You can explore your current settings on all the different applications just wit
 * Read the type of the setting you want to modify: `defaults read-type com.apple.finder NewWindowTargetPath`
 * Write your new value for the setting: `write com.apple.finder NewWindowTargetPath "file:///Users/your-username/"`
 
-#### 🏃‍♂️ How to automate settings changes 
+##### 🏃‍♂️ How to automate settings changes 
 
 The problem with the previous approach is that it could be a little verbose while showing you aaaaall the different settings an application has. So here's a quick tip on how to optimize the process for these settings which can be adjusted using the UI:
 
@@ -85,9 +93,6 @@ The problem with the previous approach is that it could be a little verbose whil
     * Alternativelly: `diff finder_defaults_before_ui_changes finder_defaults_after_ui_changes.json`
 * Save the modified keys and construct your `write` commands in order to automate it the next time. For instance: `write com.apple.finder NewWindowTargetPath "file:///Users/your-username/"`
 
-## 👷‍♂️ Work In Progress
-
-As you can see, right now this repository only consists of these two simply files. The idea is to add new settings to it during my own setup process, and allow you to contribute to it 🙂
 
 ## ℹ️ About
 
@@ -106,6 +111,8 @@ We've used a lot of different sources to get some inspirations on the things to 
 * https://github.com/pawelgrzybek/dotfiles/blob/master/setup-macos.sh
 
 ## 🤝 Contributing
+
+The idea of this repo is to add new settings to it during my own setup process and allow you to contribute to it 🙂
 
 It would be awesome to learn from your experience automating the setup of your environment. So please, feel free to send us your tips and tricks via Twitter ([@CodelyTV](https://twitter.com/CodelyTV)), or [opening an issue](https://github.com/CodelyTV/dotfiles/issues).
 
