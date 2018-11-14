@@ -27,6 +27,7 @@ declare -a brew_cask_apps=(
   'google-backup-and-sync'
   'slack'
   'whatsapp'
+  'sketchbook'
   'docker'
   'iterm2'
   'sourcetree'
@@ -49,6 +50,8 @@ declare -a brew_cli_tools=(
   'ffmpeg'
   'tree'
   'parallel'
+  'bat'
+  'fzf'
   'zsh'
   'zsh-syntax-highlighting'
   'zsh-autosuggestions'
@@ -59,6 +62,7 @@ declare -a brew_cli_tools=(
   'php'
   'sbt'
   'gradle'
+  'hugo'
 )
 
 for tool in "${brew_cli_tools[@]}"; do
