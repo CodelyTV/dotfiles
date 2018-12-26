@@ -38,5 +38,6 @@
     // 🎨 CodelyTV theme draft
     "workbench.colorCustomizations": {
         "focusBorder": "#10fb7a",
-    }
+    },
+    "window.zoomLevel": 0
 }
