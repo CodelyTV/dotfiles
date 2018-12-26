@@ -14,14 +14,21 @@ Feel free to explore the repository and get anything you need 😬
 
 ## ☝️ Instructions
 
-1. Read the `Contents` section of this readme in order to grasp which kind of settings and tools could be useful for you
+1. Read the "✍️ Contents" section of this readme in order to grasp which kind of settings and tools could be useful for you
 2. Clone this repository: `git clone https://github.com/CodelyTV/dotfiles.git codelytv_dotfiles`
 2. Move to the project root directory: `cd codelytv_dotfiles`
 3. Modify the scripts and dotfiles in order to suite your needs
 4. Execute the scripts from the terminal:
-    * [`.install_macos_apps.sh`](install_macos_apps.sh)
-    * [`.adjust_macos_settings.sh`](adjust_macos_settings.sh)
-5. Copy or create the symbolic links to the dotfiles you're interested in as shown in the `Contents` section
+    * `.install_macos_apps.sh`
+    * `.adjust_macos_settings.sh`
+5. Copy or create the symbolic links to the dotfiles you're interested in as shown in the "✍️ Contents" section
+
+### Hardcoded references
+
+We should try to modify this asking the user while installing the dotfiles, however, in the meantime here you have a list of the hardcoded references to directories to let you easily modify them:
+
+* Path to the folder containing this dotfiles repository clone:
+    * [`.profile`#L2](.profile)
 
 ## ✍️ Contents
 
@@ -39,6 +46,14 @@ You'll find some self-explanatory files in this repo containing comments on what
 
 * [`.gitconfig`](.gitconfig): Different settings for the Git CSV system such as including the following file 
 * [`.gitignore_global`](.gitignore_global): Ignore rules to apply to every single repository (usefull to do not mess up the project `.gitignore` file with particularities of your development environment such as the `.DS_Store` files or your IDE settings)
+
+### ⚡ Custom commands
+
+These are custom commands defined in [binary files](bin) with little scripts to boost your productivity in your daily basis tasks:
+
+These binaries are installed thanks to adding [the binary files directory](bin) to the `PATH` environment variable in the  [`.profile`](.profile) file. 
+
+* [`bin/docker_connect`](bin/docker_connect): Lists your running containers and let you select and open an interactive terminal in one of them 
 
 ### 📱 Other apps dotfiles
 
@@ -91,7 +106,6 @@ The problem with the previous approach is that it could be a little verbose whil
     * Alternativelly: `diff finder_defaults_before_ui_changes finder_defaults_after_ui_changes.json`
 * Save the modified keys and construct your `write` commands in order to automate it the next time. For instance: `write com.apple.finder NewWindowTargetPath "file:///Users/your-username/"`
 
-
 ## ℹ️ About
 
 This hopefully helpful repository has been developed by [CodelyTV](https://github.com/CodelyTV) and [contributors](https://github.com/CodelyTV/dotfiles/graphs/contributors).
@@ -107,6 +121,7 @@ We've used a lot of different sources to get some inspirations on the things to 
 * https://github.com/mathiasbynens/dotfiles/blob/master/.macos
 * https://github.com/MoOx/setup
 * https://github.com/pawelgrzybek/dotfiles/blob/master/setup-macos.sh
+* https://github.com/rgomezcasas/dotfiles
 
 ## 🤝 Contributing
 

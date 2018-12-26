@@ -1,3 +1,6 @@
+# Load Path
+export PATH=$HOME/dev/work/codelytv/bootstraps/dotfiles/bin:$PATH
+
 # Load aliases
 
 if [ -f ~/.aliases ]; then
