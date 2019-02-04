@@ -12,6 +12,24 @@ Repository containing all the automations required to setup your MacOS in just a
 
 Feel free to explore the repository and get anything you need 😬
 
+## 📜 Table of Contents
+
+* [☝️ Instructions](#-instructions)
+* [✍️ Repository Contents](#-repository-contents)
+    * [💻 Shell dotfiles](#-shell-dotfiles)
+    * [🐙 Git dotfiles](#-git-dotfiles)
+    * [⚡ Custom commands](#-custom-commands)
+    * [📱 Other apps dotfiles](#-other-apps-dotfiles-and-settings)
+    * [🤖 Shell scripts](#-shell-scripts)
+        * [🍎 `install_macos_apps.sh`](#-install_macos_appssh))
+        * [🎛️ `adjust_macos_settings.sh`](#-adjust_macos_settingssh))
+            * [🤔 How to discover new domains and settings](#-how-to-discover-new-domains-and-settings)
+            * [🏃‍♂️ How to automate settings changes](#-how-to-automate-settings-changes)
+* [ℹ️ About](#-about)
+* [🤝 Contributing](#-contributing)
+    * [☑️ ToDo suggestions](#-todo-suggestions)
+* [⚖️ License](#-license)
+
 ## ☝️ Instructions
 
 1. Read the "✍️ Contents" section of this readme in order to grasp which kind of settings and tools could be useful for you
@@ -23,14 +41,7 @@ Feel free to explore the repository and get anything you need 😬
     * `.adjust_macos_settings.sh`
 5. Copy or create the symbolic links to the dotfiles you're interested in as shown in the "✍️ Contents" section
 
-### Hardcoded references
-
-We should try to modify this asking the user while installing the dotfiles, however, in the meantime here you have a list of the hardcoded references to directories to let you easily modify them:
-
-* Path to the folder containing this dotfiles repository clone:
-    * [`.profile`#L2](.profile#L2)
-
-## ✍️ Contents
+## ✍️ Repository Contents
 
 You'll find some self-explanatory files in this repo containing comments on what they do, however, here you have a brief explanation of each on of them.
 
@@ -55,9 +66,21 @@ These binaries are installed thanks to adding [the binary files directory](bin) 
 
 * [`bin/docker_connect`](bin/docker_connect): Lists your running containers and let you select and open an interactive terminal in one of them 
 
-### 📱 Other apps dotfiles
+### 📱 Other apps dotfiles and settings
 
-* [`.vscode_settings.json`](.vscode_settings.json): You can grab the settings you want to, or create a symbolic link to this file with something like: `$ ln -s paht_to_this_repo_clone/.vscode_settings.json ~/Library/Application\ Support/Code/User/settings.json`
+Copy and paste the settings you want, create the symbolic links as described in each case, or follow the instructions to edit them:
+
+* [Visual Studio Code](.vscode_settings.json):
+    * Symlink: `$ ln -s paht_to_this_repo_clone/.vscode_settings.json ~/Library/Application\ Support/Code/User/settings.json`
+* JetBrains family IDEs (IntelliJ IDEA, PhpStorm, PyCharm, etc.):
+    * [Custom VM Options](IntelliJ IDEA.app.vmoptions)
+        1. Open the IDE
+        2. Go to `Help -> Edit Custom VM Options…` menu option
+        3. Paste the desired JVM properties modifying them based on your environment resources
+* [iStat Menus](iStat Menus Settings.ismp)
+    1. Modify the `license` XML key dictionary values specifying your email and serial
+    2. Open iStats
+    3. Go to `File -> Import settings…` menu option
 
 ### 🤖 Shell scripts
 
@@ -126,11 +149,26 @@ We've used a lot of different sources to get some inspirations on the things to 
 
 ## 🤝 Contributing
 
-The idea of this repo is to add new settings to it during my own setup process and allow you to contribute to it 🙂
+It would be awesome to learn from your experience automating the setup of your environment.
+ 
+So please, feel free to send us your tips and tricks via Twitter ([@CodelyTV](https://twitter.com/CodelyTV)), or consider [opening an issue](https://github.com/CodelyTV/dotfiles/issues) before starting to work on a Pull Request 🙂
 
-It would be awesome to learn from your experience automating the setup of your environment. So please, feel free to send us your tips and tricks via Twitter ([@CodelyTV](https://twitter.com/CodelyTV)), or [opening an issue](https://github.com/CodelyTV/dotfiles/issues).
+### ☑️ ToDo suggestions
 
-We'll try to maintain this project as simple as possible (that is, not adding applications we won't use for instance), so we ask you to please consider opening an issue before working on a Pull Request. This way we can debate before wasting efforts 🙂
+Here you have some task we have in mind in case you don't have other features ideas but the willing to contribute 🤟
+ 
+* [ ] Avoid hardcoding paths or custom values
+    * We should try to modify this asking the user while installing the dotfiles, however, in the meantime here you have a list of the hardcoded references to directories to let you easily modify them:
+    * [`.profile`#L2](.profile#L2)
+* [ ] Bash script for clean installations execution
+    * Right now we're telling users to clone this repo and then execute the scripts
+    * This has a problem: If the user has a clean MacOS install, s/he will not have Git
+    * We should add a little `installer.sh` script which can install git, clone the repo, and ask the user for which this s/he wants to execute
+    * As a following feature, this script could:
+        * Ask the user for the hardcoded values such as config paths and so on
+        * Read the Brew packages to install from a non versioned `.packages_to_install.yml` file in order to let the user customize them based on a `.packages_to_install.yml.dist`
+        * Ask the user for which specific configuration s/he wants to execute from the `.adjust_macos_settings.sh` (in fact, we should start to split this file… 😅) 
+
 
 ## ⚖️ License
 
