@@ -12,6 +12,7 @@ brew tap homebrew/cask-versions
 
 declare -a brew_cask_apps=(
   'java'
+  'visualvm'
   'google-chrome'
   'the-unarchiver'
   'vlc'
@@ -29,15 +30,25 @@ declare -a brew_cask_apps=(
   'whatsapp'
   'sketchbook'
   'docker'
+  'postman'
   'iterm2'
   'sourcetree'
   'jetbrains-toolbox'
-  'sublime-text'
   'visual-studio-code'
   'sequel-pro'
   '1password6'
   'transmit'
   'transmission'
+  'appcleaner'
+  'colorpicker-skalacolor'
+  'qlcolorcode'
+  'qlstephen'
+  'qlmarkdown'
+  'quicklook-json'
+  'betterzip'
+  'webpquicklook'
+  'suspicious-package'
+  'qlvideo'
 )
 
 for app in "${brew_cask_apps[@]}"; do
@@ -60,6 +71,7 @@ declare -a brew_cli_tools=(
   'tldr'
   'git'
   'php'
+  'composer'
   'sbt'
   'gradle'
   'hugo'
@@ -82,6 +94,7 @@ declare -a mas_apps=(
   '715464874' # Disk Map
   '587512244' # Kaleidoscope
   '784801555' # OneNote
+  '1043270657' # GIF Keyboard
 )
 
 for app in "${mas_apps[@]}"; do

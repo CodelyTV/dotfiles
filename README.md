@@ -28,7 +28,7 @@ Feel free to explore the repository and get anything you need 😬
 We should try to modify this asking the user while installing the dotfiles, however, in the meantime here you have a list of the hardcoded references to directories to let you easily modify them:
 
 * Path to the folder containing this dotfiles repository clone:
-    * [`.profile`#L2](.profile)
+    * [`.profile`#L2](.profile#L2)
 
 ## ✍️ Contents
 
@@ -122,6 +122,7 @@ We've used a lot of different sources to get some inspirations on the things to 
 * https://github.com/MoOx/setup
 * https://github.com/pawelgrzybek/dotfiles/blob/master/setup-macos.sh
 * https://github.com/rgomezcasas/dotfiles
+* https://github.com/sindresorhus/quick-look-plugins
 
 ## 🤝 Contributing
 
