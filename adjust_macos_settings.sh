@@ -375,6 +375,7 @@ defaults write com.apple.finder ShowStatusBar -bool true
 defaults write com.apple.finder FinderSpawnTab -bool false
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 defaults write com.apple.finder _FXSortFoldersFirst -bool true
+defaults write com.apple.finder QLEnableTextSelection -bool TRUE
 
 # Toolbar icons
 defaults write com.apple.finder 'NSToolbar Configuration Browser' '{
