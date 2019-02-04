@@ -1,0 +1,26 @@
+# Custom IntelliJ VM Options
+#
+# https://github.com/FoxxMD/intellij-jvm-options-explained
+# https://intellij-support.jetbrains.com/hc/en-us/articles/206544869-Configuring-JVM-options-and-platform-properties
+
+-Xms1024m
+-Xmx3072m
+-XX:NewRatio=2
+-XX:+UseG1GC
+-XX:-UseParNewGC
+-XX:-UseConcMarkSweepGC
+-XX:SoftRefLRUPolicyMSPerMB=50
+-server
+-XX:ReservedCodeCacheSize=320m
+-XX:+OmitStackTraceInFastThrow
+-Dsun.io.useCanonCaches=false
+-Djava.net.preferIPv4Stack=true
+-XX:+OptimizeStringConcat
+-XX:+UseCompressedOops
+-XX:+UseCompressedStrings
+-XX:+UseFastAccessorMethods
+-XX:+UseStringCache
+-xverify:none
+-Dfile.encoding=UTF-8
+-Djdk.http.auth.tunneling.disabledSchemes=""
+-Dide.no.platform.update=true
