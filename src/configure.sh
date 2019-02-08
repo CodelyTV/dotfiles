@@ -3,7 +3,11 @@
 CONFIGURATORS_PATH=$ROOT_DIRECTORY/src/configurators
 
 configurators=(
+    adjust_apps_settings
+    adjust_macos_settings
+    bash
     git
+    install_macos_apps
 )
 
 function main() {
@@ -12,4 +16,4 @@ function main() {
     done
 }
 
-main;
+main

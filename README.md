@@ -47,16 +47,16 @@ You'll find some self-explanatory files in this repo containing comments on what
 
 ### 💻 Shell dotfiles
 
-* [`.aliases`](.aliases): Common command aliases in order to save some characters 😬
+* [`.aliases`](files/bash/.aliases): Common command aliases in order to save some characters 😬
 * [`.bashrc`](.bashrc): Main config for Bash shell (loads common `.profile`)
-* [`.functions`](.functions): Common shell functions (key difference from `.aliases`: functions will receive an argument)
+* [`.functions`](files/bash/.functions): Common shell functions (key difference from `.aliases`: functions will receive an argument)
 * [`.profile`](.profile): Common profile between the different shells in order to have all the functionalities in both of them. This file loads `.aliases` and `.functions`
-* [`.zshrc`](.zshrc): Main config for ZSH shell (loads common `.profile`)
+* [`.zshrc`](files/zsh/.zshrc): Main config for ZSH shell (loads common `.profile`)
 
 ### 🐙 Git dotfiles
 
-* [`.gitconfig`](.gitconfig): Different settings for the Git CSV system such as including the following file 
-* [`.gitignore_global`](.gitignore_global): Ignore rules to apply to every single repository (usefull to do not mess up the project `.gitignore` file with particularities of your development environment such as the `.DS_Store` files or your IDE settings)
+* [`.gitconfig`](files/git/.gitconfig): Different settings for the Git CSV system such as including the following file 
+* [`.gitignore_global`](files/git/.gitignore_global): Ignore rules to apply to every single repository (usefull to do not mess up the project `.gitignore` file with particularities of your development environment such as the `.DS_Store` files or your IDE settings)
 
 ### ⚡ Custom commands
 
@@ -70,14 +70,14 @@ These binaries are installed thanks to adding [the binary files directory](bin) 
 
 Copy and paste the settings you want, create the symbolic links as described in each case, or follow the instructions to edit them:
 
-* [Visual Studio Code](.vscode_settings.json):
+* [Visual Studio Code](files/vscode/.vscode_settings.json):
     * Symlink: `$ ln -s paht_to_this_repo_clone/.vscode_settings.json ~/Library/Application\ Support/Code/User/settings.json`
 * JetBrains family IDEs (IntelliJ IDEA, PhpStorm, PyCharm, etc.):
     * [Custom VM Options](IntelliJ IDEA.app.vmoptions)
         1. Open the IDE
         2. Go to `Help -> Edit Custom VM Options…` menu option
         3. Paste the desired JVM properties modifying them based on your environment resources
-* [iStat Menus](iStat Menus Settings.ismp)
+* [iStat Menus](files/mac_apps/iStat Menus Settings.ismp)
     1. Modify the `license` XML key dictionary values specifying your email and serial
     2. Open iStats
     3. Go to `File -> Import settings…` menu option
@@ -159,7 +159,7 @@ Here you have some task we have in mind in case you don't have other features id
  
 * [ ] Avoid hardcoding paths or custom values
     * We should try to modify this asking the user while installing the dotfiles, however, in the meantime here you have a list of the hardcoded references to directories to let you easily modify them:
-    * [`.profile`#L2](.profile#L2)
+    * [`.profile`#L2](files/bash/.profile#L2)
 * [ ] Bash script for clean installations execution
     * Right now we're telling users to clone this repo and then execute the scripts
     * This has a problem: If the user has a clean MacOS install, s/he will not have Git
