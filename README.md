@@ -8,13 +8,13 @@
 [![CodelyTV](https://img.shields.io/badge/codely-tv-green.svg?style=flat-square)](codely.tv)
 [![License](https://img.shields.io/github/license/CodelyTV/scala-http-api.svg?style=flat-square)](LICENSE)
 
-Repository containing all the automations required to setup your MacOS in just a few seconds after a fresh install.
+Repository containing all the automation required to setup your MacOS in just a few seconds after a fresh install.
 
 Feel free to explore the repository and get anything you need 😬
 
 ## 📜 Table of Contents
 
-* [☝️ Instructions](#-instructions)
+* [🚀 Installation](#-installation)
 * [✍️ Repository Contents](#-repository-contents)
     * [💻 Shell dotfiles](#-shell-dotfiles)
     * [🐙 Git dotfiles](#-git-dotfiles)
@@ -22,26 +22,25 @@ Feel free to explore the repository and get anything you need 😬
     * [📱 Other apps dotfiles](#-other-apps-dotfiles-and-settings)
     * [🤖 Shell scripts](#-shell-scripts)
         * [🍎 `install_macos_apps.sh`](#-install_macos_appssh))
-        * [🎛️ `adjust_macos_settings.sh`](#-adjust_macos_settingssh))
+        * [🎛️ `adjust_macos_settings.sh`](#-adjust_macos_settingssh)
             * [🤔 How to discover new domains and settings](#-how-to-discover-new-domains-and-settings)
-            * [🏃‍♂️ How to automate settings changes](#-how-to-automate-settings-changes)
-* [ℹ️ About](#-about)
+            * [🏃‍♂️ How to automate settings changes](#️-how-to-automate-settings-changes)
+* [ℹ️ About](#ℹ️-about)
 * [🤝 Contributing](#-contributing)
-    * [☑️ ToDo suggestions](#-todo-suggestions)
-* [⚖️ License](#-license)
+    * [☑️ ToDo suggestions](#️-todo-suggestions)
+* [⚖️ License](#️-license)
 
-## ☝️ Instructions
+## 🚀 Installation
 
-1. Read the "✍️ Contents" section of this readme in order to grasp which kind of settings and tools could be useful for you
-2. Clone this repository: `git clone https://github.com/CodelyTV/dotfiles.git codelytv_dotfiles`
-2. Move to the project root directory: `cd codelytv_dotfiles`
-3. Modify the scripts and dotfiles in order to suite your needs
-4. Execute the scripts from the terminal:
-    * `.install_macos_apps.sh`
-    * `.adjust_macos_settings.sh`
-5. Copy or create the symbolic links to the dotfiles you're interested in as shown in the "✍️ Contents" section
+Execute the [`installer`](installer) from your terminal in order to avoid even having to manually install git!
 
-## ✍️ Repository Contents
+```bash
+bash <(curl -s https://raw.githubusercontent.com/codelytv/dotfiles/master/installer)
+```
+
+If you want to check out all the details involved in a migration from a legacy to a new PC, you can checkout the [`installation-guide.md`](doc/installation-guide.md) 
+
+## ✍️ Repository Contents (⚠️ Outdated documentation ⚠️)
 
 You'll find some self-explanatory files in this repo containing comments on what they do, however, here you have a brief explanation of each on of them.
 
@@ -66,22 +65,6 @@ These binaries are installed thanks to adding [the binary files directory](bin) 
 
 * [`bin/docker_connect`](bin/docker_connect): Lists your running containers and let you select and open an interactive terminal in one of them 
 
-### 📱 Other apps dotfiles and settings
-
-Copy and paste the settings you want, create the symbolic links as described in each case, or follow the instructions to edit them:
-
-* [Visual Studio Code](.vscode_settings.json):
-    * Symlink: `$ ln -s paht_to_this_repo_clone/.vscode_settings.json ~/Library/Application\ Support/Code/User/settings.json`
-* JetBrains family IDEs (IntelliJ IDEA, PhpStorm, PyCharm, etc.):
-    * [Custom VM Options](IntelliJ IDEA.app.vmoptions)
-        1. Open the IDE
-        2. Go to `Help -> Edit Custom VM Options…` menu option
-        3. Paste the desired JVM properties modifying them based on your environment resources
-* [iStat Menus](iStat Menus Settings.ismp)
-    1. Modify the `license` XML key dictionary values specifying your email and serial
-    2. Open iStats
-    3. Go to `File -> Import settings…` menu option
-
 ### 🤖 Shell scripts
 
 #### 🍎 [`install_macos_apps.sh`](install_macos_apps.sh)
@@ -93,6 +76,24 @@ Homebrew also includes [Homebrew Cask](http://caskroom.io/). It's a package mana
 With these 2 command line tools, we'll be able to install and upgrade our apps without having to leave the terminal. This allow us to automate the whole setup process while starting clean on a new mac, and also to do not have to open all the different apps we've installed in order to update them.
 
 You can [check out the `install_macos_apps.sh` script](install_macos_apps.sh) in order to see the detailed list of the apps it will install, and modify it based on your needs, and [the available packages in Homebrew](https://formulae.brew.sh/formula/) and [Homebrew Cask apps](https://github.com/Homebrew/homebrew-cask/tree/master/Casks).
+
+#### 📱 [`adjust_apps_settings.sh`](adjust_apps_settings.sh)
+
+This script is intended to create the symbolic links to each application settings in order to avoid having to copy and paste the different files on each case.
+
+[`The script`](adjust_apps_settings.sh) is self documented so you can check out which apps we're dealing with.
+
+There're some apps pending to automate (Work In Progress):  
+
+* JetBrains family IDEs (IntelliJ IDEA, PhpStorm, PyCharm, etc.):
+    * [Custom VM Options](IntelliJ%20IDEA.app.vmoptions)
+        1. Open the IDE
+        2. Go to `Help -> Edit Custom VM Options…` menu option
+        3. Paste the desired JVM properties modifying them based on your environment resources
+* [iStat Menus](iStat Menus Settings.ismp)
+    1. Modify the `license` XML key dictionary values specifying your email and serial
+    2. Open iStats
+    3. Go to `File -> Import settings…` menu option
 
 #### 🎛️ [`adjust_macos_settings.sh`](adjust_macos_settings.sh)
 
@@ -157,19 +158,6 @@ So please, feel free to send us your tips and tricks via Twitter ([@CodelyTV](ht
 
 Here you have some task we have in mind in case you don't have other features ideas but the willing to contribute 🤟
  
-* [ ] Avoid hardcoding paths or custom values
-    * We should try to modify this asking the user while installing the dotfiles, however, in the meantime here you have a list of the hardcoded references to directories to let you easily modify them:
-    * [`.profile`#L2](.profile#L2)
-* [ ] Bash script for clean installations execution
-    * Right now we're telling users to clone this repo and then execute the scripts
-    * This has a problem: If the user has a clean MacOS install, s/he will not have Git
-    * We should add a little `installer.sh` script which can install git, clone the repo, and ask the user for which this s/he wants to execute
-    * As a following feature, this script could:
-        * Ask the user for the hardcoded values such as config paths and so on
-        * Read the Brew packages to install from a non versioned `.packages_to_install.yml` file in order to let the user customize them based on a `.packages_to_install.yml.dist`
-        * Ask the user for which specific configuration s/he wants to execute from the `.adjust_macos_settings.sh` (in fact, we should start to split this file… 😅) 
-
-
 ## ⚖️ License
 
 The MIT License (MIT). Please see [License](LICENSE) for more information.

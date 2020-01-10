@@ -1,0 +1,35 @@
+############################################
+# IDE generated files
+############################################
+
+.idea/
+*.iml
+*.iws
+.idea-compl
+*.sc
+.vscode/
+
+# From: https://gist.github.com/octocat/9257657
+
+############################################
+# OS generated files
+############################################
+
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+############################################
+# OS generated files
+############################################
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

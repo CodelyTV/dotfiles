@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source "$DOTFILES_PATH/scripts/core/_main.sh"
+
+##? Resets the permissions of the files in the current directory. Check out reset-permissions-recursive
+#?? 1.0.0
+##?
+##? Usage:
+##?    reset-permissions
+
+docs::eval "$@"
+
+git diff -p -R --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply

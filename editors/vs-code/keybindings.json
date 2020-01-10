@@ -1,0 +1,55 @@
+[
+  // 🎨 UI
+  {
+    "key": "ctrl+p",
+    "command": "workbench.action.toggleStatusbarVisibility",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+0",
+    "command": "workbench.action.toggleCenteredLayout",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+alt+1",
+    "command": "workbench.action.toggleActivityBarVisibility",
+    "when": "editorTextFocus"
+  },
+  // ✍️ Editor shortcuts
+  // Available commands: https://code.visualstudio.com/docs/getstarted/keybindings#_default-keyboard-shortcuts
+  {
+    "key": "cmd+alt+shift+d",
+    "command": "editor.action.deleteLines",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+alt+shift+c",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus"
+  },
+  // ↕️ Navigation
+  {
+    "key": "cmd+alt+shift+right",
+    "command": "editor.emmet.action.matchTag",
+    "when": "editorTextFocus"
+  },
+  // ♻️ Refactorings
+  // More info: https://code.visualstudio.com/docs/editor/refactoring#_keybindings-for-code-actions
+  {
+    "key": "cmd+alt+m",
+    "command": "editor.action.codeAction",
+    "args": {
+      "kind": "refactor.extract.function"
+    },
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+alt+c",
+    "command": "editor.action.codeAction",
+    "args": {
+      "kind": "refactor.extract.constant",
+      "preferred": true,
+      "apply": "ifsingle"
+    }
+  }
+]

@@ -1,0 +1,63 @@
+{
+    // 👀 VS Code UI
+    "editor.cursorBlinking": "smooth",
+    "window.zoomLevel": 0,
+    "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "Gruvbox Dark Medium",
+    "workbench.editor.enablePreview": false,
+    "workbench.editor.showTabs": true,
+    // ⚙️ Common settings
+    "window.restoreWindows": "all",
+    "window.openFoldersInNewWindow": "on",
+    "window.openFilesInNewWindow": "off",
+    "workbench.startupEditor": "newUntitledFile",
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "search.useGlobalIgnoreFiles": true,
+    "files.autoSave": "onFocusChange",
+    "files.associations": {
+        "Dockerfile-*": "dockerfile"
+    },
+    // ✍️ Editor
+    "editor.minimap.enabled": false,
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.fontFamily": "Dank Mono, Hack, Menlo, Monaco, monospace",
+    "editor.fontSize": 16,
+    "editor.lineHeight": 32,
+    "editor.rulers": [120],
+    "editor.wordWrap": "on",
+    "editor.wrappingIndent": "indent",
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.tree.horizontalScrolling": true,
+    "files.trimTrailingWhitespace": true,
+    // ⬛ Terminal
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.fontFamily": "Dank Mono, Hack, Menlo, Monaco, monospace",
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.lineHeight": 1.4,
+    // 👨‍💻 Programming languages
+    // Avoid duplicate suggestions with PHP IntelliSense plugin
+    "php.suggest.basic": false,
+    "php.executablePath": "/usr/local/bin/php",
+    "[markdown]": {
+        "editor.renderWhitespace": "all",
+        "editor.acceptSuggestionOnEnter": "off",
+        "editor.parameterHints.enabled": false,
+        "editor.quickSuggestions": false,
+        "editor.snippetSuggestions": "none",
+        "editor.formatOnSave": false // Converts "*" lists into "-" and other nasty things :/
+    },
+    // 🐙 Git
+    "git.autofetch": true,
+    "git.alwaysSignOff": true,
+    "git.defaultCloneDirectory": "~/dev",
+    "git.fetchOnPull": true,
+    "git.rebaseWhenSync": true,
+    "git.showPushSuccessNotification": true,
+    // 🎨 CodelyTV theme draft
+    "workbench.colorCustomizations": {
+        "focusBorder": "#10fb7a"
+    },
+    "workbench.statusBar.visible": true
+}

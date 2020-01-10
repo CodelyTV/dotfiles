@@ -1,0 +1,6 @@
+# Compiled zsh
+terminal/zsh/**/**.zwc
+terminal/zsh/**/**.zwc.old
+
+# Private Stuff
+/**/**/private-*

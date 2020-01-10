@@ -1,0 +1,5 @@
+zmodules=(environment git-info history input syntax-highlighting completion autosuggestions)
+
+ztermtitle='%~'
+
+zhighlighters=(main brackets)

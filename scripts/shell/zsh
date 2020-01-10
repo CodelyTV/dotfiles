@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+source "$DOTFILES_PATH/scripts/core/_main.sh"
+
+##? ZSH helpers
+#?? 1.0.0
+##?
+##? Usage:
+##?    zsh optimize             # Optimize ZSH
+##?    zsh test_performance     # Print the current ZSH performance
+##?    zsh reload_completions   # Print the current ZSH performance
+
+docs::eval_help "$@"
+
+case $1 in
+"optimize")
+  find "$DOTFILES_PATH/terminal/zsh" -name '*.zwc' -exec rm -rf {} \;
+  find "$DOTFILES_PATH/terminal/zsh" -name '*.old' -exec rm -rf {} \;
+
+  /bin/zsh -c "source ${ZDOTDIR:-${HOME}}/.zlogin"
+  echo "👌 Done!"
+  ;;
+"test_performance")
+  for i in $(seq 1 10); do /usr/bin/time /bin/zsh -i -c exit; done
+  ;;
+"reload_completions")
+  /bin/zsh -c "autoload -U compaudit"
+
+  echo "Done! Now execute: compinit"
+  ;;
+*)
+  docs::eval_help --help
+  ;;
+esac
