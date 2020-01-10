@@ -28,13 +28,14 @@ if platform::is_linux; then
   install_linux_custom
 fi
 
-log::note "Installing php packages"
+log::note "🐘 Installing php packages"
 composer global install
 
-log::note "Installing npm packages"
+log::note "🌈 Installing npm packages"
 xargs npm install -g <"$DOTFILES_PATH/langs/js/global_modules.txt"
 
-log::note "Setting ZSH as the default shell"
+log::note "💻 Setting ZSH as the default shell"
+command -v zsh | sudo tee -a /etc/shells
 chsh -s "$(command -v zsh)"
 
 read -rp "🦑 Git config: What is you email? " git_email
@@ -47,4 +48,4 @@ git config --global --unset commit.gpgsign
 git config --global --unset tag.gpgsign
 git config --global --unset gpg.program
 
-log::warning "Remember to add the origin of your fork!"
+log::success "🎉 Done!"
