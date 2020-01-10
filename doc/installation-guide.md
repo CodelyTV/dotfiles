@@ -24,6 +24,10 @@ Copy from the previous computer before The Shutdown™:
 * `chmod -R 700 ~/.ssh`
 * Execute the dotfiles installer:
   * `bash <(curl -s https://raw.githubusercontent.com/codelytv/dotfiles/master/installer)`
+  * If any dialog appears regarding to not being able to install something, check in "System Preferences… > Security & Privacy" if you have to manually approve it.
+  * If there's any error and you want to execute again the cloned dotfiles:
+     1. `export DOTFILES_PATH="$HOME/.dotfiles"`
+     2. `.dotfiles/bin/dot" self install` 
 * Install software licenses
   * Caret Beta ([Manually install]((https://caret.io/releases)) it because [it isn't popular enough to be be included in Brew](https://github.com/Homebrew/homebrew*cask*versions/pull/8392))
   * Contexts
