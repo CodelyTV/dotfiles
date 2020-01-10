@@ -139,10 +139,10 @@ View › Add Theme...: none
 View › Down: Cmd -
 View › Mode Typewriter: Cmd Alt T
 View › Default: Cmd 0
-View › Show Files: Cmd Shift X
+View › Show Files: Cmd Shift E
 View › Show Outline: Cmd Shift B
 View › Show None: Cmd \
 View › Show Preview: Cmd Shift I
-View › Show Stats: Cmd Shift Z
+View › Show Stats: none
 View › Preview: none
 ```

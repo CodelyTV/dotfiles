@@ -8,9 +8,10 @@
 - link:
     ~/Library/Application Support/Code/User/settings.json: editors/vs-code/settings.json
     ~/Library/Application Support/Code/User/keybindings.json: editors/vs-code/keybindings.json
-    ~//Library/Application Support/Caret Beta/config/Keyboard Shortcuts.md: editors/caret/Keyboard Shortcuts.md
-    ~//Library/Application Support/Caret Beta/config/Preferences.md: editors/caret/Preferences.md
-    ~//Library/Application Support/Rocket/rocket.db: mac/rocket/rocket.db
+    ~/Library/Application Support/Caret Beta/config/Keyboard Shortcuts.md: editors/caret/Keyboard Shortcuts.md
+    ~/Library/Application Support/Caret Beta/config/Preferences.md: editors/caret/Preferences.md
+    ~/Library/Application Support/Rocket/rocket.db: mac/rocket/rocket.db
+    ~/Library/Preferences/com.surteesstudios.Bartender.plist: mac/bartender/com.surteesstudios.Bartender.plist
 
 - create:
     - ~/.hushlogin

@@ -154,10 +154,14 @@ It would be awesome to learn from your experience automating the setup of your e
  
 So please, feel free to send us your tips and tricks via Twitter ([@CodelyTV](https://twitter.com/CodelyTV)), or consider [opening an issue](https://github.com/CodelyTV/dotfiles/issues) before starting to work on a Pull Request 🙂
 
-### ☑️ ToDo suggestions
+### ☑️ ToDo
 
-Here you have some task we have in mind in case you don't have other features ideas but the willing to contribute 🤟
- 
+* Move the things already specified in the [`installation-guide.md`](doc/installation-guide.md) to automations. How to procedure:
+  * Search for the application `plist` files. In [this repo](https://github.com/lra/mackup/blob/master/mackup/applications/) there're a lot of supported applications which specify the config paths.
+  * Move the `plist` files to this repo in case of not containing sensitive data
+  * Create the symlink between the application `plist` file and this repo
+  * Specify the symlink in the [`conf.macos.yaml`](symlinks/conf.macos.yaml) file mapping
+
 ## ⚖️ License
 
 The MIT License (MIT). Please see [License](LICENSE) for more information.

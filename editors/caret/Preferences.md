@@ -4,11 +4,11 @@ Edit and save to update preferences:
 
 ```yaml
 font: system-ui
-fontSize: 20
+fontSize: 18
 codeFont: "Dank Mono"
-codeFontSize: 18
-lineHeight: 1.8
-lineWidth: 120
+codeFontSize: 16
+lineHeight: 1.65
+lineWidth: 72
 tabSize: 2
 useLargeFontInHeadings: true
 ```

@@ -9,12 +9,6 @@ Copy from the previous computer before The Shutdown™:
   * `~/.ssh`
   * `~/Code`
 * Slack workspaces list
-* Licenses:
-  * Caret (CanePass)
-  * Contexts (CanePass)
-  * iStat Menus: Open and go to File > Export Settings…
-  * Rocket (CanePass)
-  * Paragon NTFS
 
 ## New computer
 
@@ -30,6 +24,8 @@ Copy from the previous computer before The Shutdown™:
      2. `.dotfiles/bin/dot" self install` 
 * Give permission to Finder Quick Look plugins
   * `open ~/Library/Quicklook/QLStephen.qlgenerator/Contents/MacOS/QLStephen`
+  * Go to Security settings and allow it
+  * `open ~/Library/QuickLook/QLColorCode.qlgenerator`
   * Go to Security settings and allow it
 * Open Dropbox
   * Login
@@ -91,27 +87,77 @@ Copy from the previous computer before The Shutdown™:
   * Set streaming quality to very high
   * Disable automatic startup
 * Open Authy and login
+* Open iTerm
+  * Select load preferences from URL and use ~/.dotfiles/mac/iTerm. On the next prompt select "NOT copy"
+  * Restart iTerm
+* Open Slack
+  * Login to the same workspaces
 * Install Caret Beta
   * [Manually download and install](https://caret.io/releases) ([it isn't popular enough to be be included in Brew](https://github.com/Homebrew/homebrew*cask*versions/pull/8392))
   * Rollback the changes done to the `editors/caret/Preferences` while installing it
-* Install software licenses
-  * Contexts
-  * [`mac/iStat/iStat Menus Settings.ismp`](../mac/iStat/iStat Menus Settings.ismp) (license key)
-  * Rocket
+  * Enable Dark mode with `Cmd+Alt+L`
+  * Enable Outline with `Cmd+Shift+B`
+  * Add license
 * Open Contexts
   * Grant permissions
   * Configure as other pc
     * Apparence
       * Vibrant Dar
       * Text Size: Large
+    * General
+      * Enable "When using multiple displays, use switching workaround"
     * Sidebar
       * No display
-    * Panel
-      * Disable Moving the cursor
-      * Disable Scroll
-* Open Slack
-  * Login to the same workspaces
-* Open iTerm
-  * Select load preferences from URL and use ~/.dotfiles/mac/iTerm. On the next prompt select "NOT copy"
+    * Search
+      * Disable "Search with"
+      * Enable "Fast Search with: Right Command-<characters>"
+    * Command-Tab
+      * Enable "Typing characters starts Fast Search"
+      * Show: Neither
+      * Command-Tab
+        * Minimized windows: Show at bottom
+        * Hidden windows: Show at bottom
+        * Apps without windows: Do not show
+      * Disable Command-Backtip
+      * Enable Option-Tab
+        * Show windows of: Active App
+        * Minimized windows: Show at bottom
+        * Hidden windows: Show at bottom
+        * Apps without windows: Do not show
+  * Open the license file in order to apply it
+* Open NTFS for Mac Installer
+  * Go to the [license manager](https://my.paragon-software.com/#/dashboard/serial/activations)
+  * Release the license from the legacy PC
+  * Apply the license to the new PC
+* Check Energy Saver preferences and disable menu bar icon
+* Check Date and Time preferences and disable menu bar icon
+* Open iStats
+  * File > Import Settings…
+* Open Monosnap
+  * General:
+    * Launch at login
+  * Hotkeys:
+    * Capture area: `Cmd+Shift+Option+5`
+    * Capture frozen area: `Cmd+Shift+Option+6`
+    * Capture area & Upload: `Not set`
+    * Capture fullscreen: `Cmd+Shift+Option+7`
+    * Fullscreen after 10s: `Cmd+Shift+Option+8`
+    * Open last image: `Cmd+Shift+Option+0`
+  * Account: Sign in
+  * Try to take a capture in order to trigger the permissions dialog
+* Open Bartender
+  * Apply license
+  * Menu Items:
+    * Set Spotlight and Notifications Center menu items in "Always Hide"
+    * Set all the other items except for the iStat Menu ones in "Hide"
+  * Hot Keys:
+    * Show Hidden items: Cmd+Shift+`
+    * Search menu bar items: Option+Shift+`
+* Open MacOS Today drawer (next to the Notifications one) and disable everything except Weather
+* Open Transmit
+  * Apply license
+  * Open Preferences > Sync > Login > Override all data in this mac with server data
+* Open Firefox & enable Sync
+* Open Karabiner
 * Restart
 * Execute `dot shell zsh reload_completions` and then `compinit`
