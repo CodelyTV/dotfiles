@@ -19,7 +19,7 @@ if platform::is_macos; then
   log::note "Installing MacOS  custom packages"
 
   read -rp "🌍 Network: Which name do you want to give to this computer? " network_computer_name
-  install_macos_custom network_computer_name
+  install_macos_custom "$network_computer_name"
 fi
 
 if platform::is_linux; then

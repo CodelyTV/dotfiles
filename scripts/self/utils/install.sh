@@ -15,7 +15,7 @@ install_macos_custom() {
 
   # Custom macOS "defaults"
   sh "$DOTFILES_PATH/mac/configs/transmission.sh"
-  sh "$DOTFILES_PATH/mac/configs/mac-os.sh $1"
+  sh "$DOTFILES_PATH/mac/configs/mac-os.sh" "$1"
 }
 
 install_linux_custom() {
