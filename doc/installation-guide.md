@@ -28,6 +28,9 @@ Copy from the previous computer before The Shutdown™:
   * If there's any error and you want to execute again the cloned dotfiles:
      1. `export DOTFILES_PATH="$HOME/.dotfiles"`
      2. `.dotfiles/bin/dot" self install` 
+* Give permission to Finder Quick Look plugins
+  * `open ~/Library/Quicklook/QLStephen.qlgenerator/Contents/MacOS/QLStephen`
+  * Go to Security settings and allow it
 * Install software licenses
   * Caret Beta ([Manually install]((https://caret.io/releases)) it because [it isn't popular enough to be be included in Brew](https://github.com/Homebrew/homebrew*cask*versions/pull/8392))
   * Contexts
