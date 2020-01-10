@@ -34,7 +34,6 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 brew "dandavison/delta/git-delta"
 brew "denisidoro/tools/navi", args: ["HEAD"]
-cask "1password6"
 cask "appcleaner"
 cask "authy"
 cask "bartender"
@@ -87,3 +86,4 @@ mas "Keynote", id: 409183694
 mas "Magnet", id: 441258766
 mas "Monosnap", id: 540348655
 mas "Pasta", id: 1438389787
+mas "1password", id: 443987910
