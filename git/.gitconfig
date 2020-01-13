@@ -1,6 +1,7 @@
 [user]
-	name = Your Name
-	email = your@email.com
+	name = Javier Ferrer
+	email = javier.mailserio@gmail.com
+	signingkey = 58271E36CB56EF2B
 
 [fetch]
 	prune = true
@@ -82,3 +83,9 @@
 [apply]
 	# Detect whitespace errors when applying a patch
 	whitespace = fix
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true
+[gpg]
+	program = /usr/local/bin/gpg
