@@ -7,6 +7,7 @@ Copy from the previous computer before The Shutdown™:
 * Data not included in this repo:
   * `~/Library/Fonts`
   * `~/.ssh`
+  * `~/.gnupg`
   * `~/Code`
 * Slack workspaces list
 
@@ -16,6 +17,7 @@ Copy from the previous computer before The Shutdown™:
 * Update MacOS
 * Paste the directories with data not included in this repo
 * `chmod -R 700 ~/.ssh`
+* `chmod -R 700 ~/.gnupg`
 * Execute the dotfiles installer:
   * `bash <(curl -s https://raw.githubusercontent.com/codelytv/dotfiles/master/installer)`
   * If any dialog appears regarding to not being able to install something, check in "System Preferences… > Security & Privacy" if you have to manually approve it.
