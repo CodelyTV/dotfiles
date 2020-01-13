@@ -28,6 +28,10 @@ if platform::is_linux; then
   install_linux_custom
 fi
 
+log::note "🐍 Installing python packages"
+pip install -r "$DOTFILES_PATH/langs/python/requirements.txt" || true
+pip install -r "$DOTFILES_PATH/langs/python/requirements.txt"
+
 log::note "🐘 Installing php packages"
 composer global install
 
