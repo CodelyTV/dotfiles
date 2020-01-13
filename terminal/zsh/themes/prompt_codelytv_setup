@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
-FIRST_CHARACTER_OK="♪"
-FIRST_CHARACTER_KO="♫"
+FIRST_CHARACTER_OK="▶"
+FIRST_CHARACTER_KO="▶"
 DIRTY="✗"
 NONE="✓"
 
@@ -19,7 +19,7 @@ prompt_codelytv_precmd() {
 }
 
 prompt_codelytv_setup() {
-  local prompt_codelytv_status='%(?:%F{green}$FIRST_CHARACTER_OK:%F{red}$FIRST_CHARACTER_KO) '
+  local prompt_codelytv_status='%(?:%F{green}{%F{white}▸%F{green}}:%F{red}{%F{white}▸%F{red}})'
 
   autoload -Uz add-zsh-hook && add-zsh-hook precmd prompt_codelytv_precmd
 
@@ -31,7 +31,7 @@ prompt_codelytv_setup() {
   zstyle ':zim:git-info:dirty' format '%F{yellow}$DIRTY'
   zstyle ':zim:git-info:keys' format 'prompt' ' %F{cyan}%b%c %C%D'
 
-  PS1="${prompt_codelytv_status}\$(prompt_codelytv_pwd)\$(prompt_codelytv_git)%f "
+  PS1="${prompt_codelytv_status} \$(prompt_codelytv_pwd)\$(prompt_codelytv_git)%f "
   RPS1=''
 }
 
