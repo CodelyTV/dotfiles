@@ -1,5 +1,10 @@
-zmodules=(environment git-info history input syntax-highlighting completion autosuggestions)
-
+# If you modify this execute `zimfw uninstall & zimfw install`
+zmodule environment
+zmodule git-info
+zmodule history
+zmodule input
+zmodule completion
+zmodule zsh-users/zsh-autosuggestions
+zmodule zsh-users/zsh-syntax-highlighting
 ztermtitle='%~'
-
 zhighlighters=(main brackets)
