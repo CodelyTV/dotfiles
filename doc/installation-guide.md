@@ -84,8 +84,8 @@ Copy from the previous computer before The Shutdown™:
     * Browse all emoji…
     * Enter activation number
 * Open Spotify
-  * Set streaming quality to very high
   * Disable automatic startup
+  * Download some playlist
 * Open Authy and login
 * Open iTerm
   * Select load preferences from URL and use ~/.dotfiles/mac/iTerm. On the next prompt select "NOT copy"
@@ -151,13 +151,15 @@ Copy from the previous computer before The Shutdown™:
     * Set Spotlight and Notifications Center menu items in "Always Hide"
     * Set all the other items except for the iStat Menu ones in "Hide"
   * Hot Keys:
-    * Show Hidden items: Cmd+Shift+`
-    * Search menu bar items: Option+Shift+`
+    * Show Hidden items: `Cmd+Opt+]`
+    * Search menu bar items: `Ctrl+Opt+]`
+    * Keyboard navigate: `Ctrl+Opt+[`
 * Open MacOS Today drawer (next to the Notifications one) and disable everything except Weather
 * Open Transmit
   * Apply license
   * Open Preferences > Sync > Login > Override all data in this mac with server data
 * Open Firefox & enable Sync
 * Open Karabiner
+* Open Skype
 * Restart
 * Execute `dot shell zsh reload_completions` and then `compinit`

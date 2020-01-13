@@ -137,7 +137,9 @@ This hopefully helpful repository has been developed by [CodelyTV](https://githu
 We've used a lot of different sources to get some inspirations on the things to do, here you have a list of them:
 
 * https://hackernoon.com/personal-macos-workspace-setup-adf61869cd79
-* https://pawelgrzybek.com/change-macos-user-preferences-via-command-line/
+* https://pawelgrzybek.com/change-macos-user-preferences-via-command-line
+* https://defaults-write.com
+* https://wilsonmar.github.io/dotfiles/
 * https://github.com/alexramirez/mac-setup
 * https://github.com/alrra/dotfiles
 * https://github.com/boochtek/mac_config/blob/master/trackpad.sh

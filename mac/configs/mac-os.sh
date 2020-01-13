@@ -199,7 +199,7 @@ defaults write -g KeyRepeat -int 3
 defaults write -g InitialKeyRepeat -int 15
 
 # Disable press-and-hold for keys in favour of key repeat
-defaults write -g ApplePressAndHoldEnabled -bool false
+defaults write -g ApplePressAndHoldEnabled -bool true
 
 # Shortcut to maximize window
 defaults write -g NSUserKeyEquivalents -dict-add "Zoom" -string "@~^f"
@@ -210,6 +210,18 @@ defaults write -g NSAutomaticDashSubstitutionEnabled -bool false
 defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
 defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
+
+# Enable full keyboard access for all controls
+# (e.g. enable Tab in modal dialogs)
+defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
+
+###############################################################################
+# 🖥️️ Screen
+###############################################################################
+
+# Require password immediately after sleep or screen saver begins
+defaults write com.apple.screensaver askForPassword -int 1
+defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 ###############################################################################
 # 🖱️ Mouse
@@ -356,30 +368,28 @@ defaults write com.apple.finder ShowRecentTags -bool false
 # Limit number of things to index
 defaults write com.apple.spotlight orderedItems -array \
 	'{"enabled" = 1;"name" = "APPLICATIONS";}' \
+	'{"enabled" = 1;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}' \
 	'{"enabled" = 1;"name" = "MENU_CONVERSION";}' \
 	'{"enabled" = 1;"name" = "MENU_EXPRESSION";}' \
 	'{"enabled" = 1;"name" = "SYSTEM_PREFS";}' \
-	'{"enabled" = 1;"name" = "DOCUMENTS";}' \
 	'{"enabled" = 1;"name" = "DIRECTORIES";}' \
 	'{"enabled" = 1;"name" = "PRESENTATIONS";}' \
-	'{"enabled" = 1;"name" = "SPREADSHEETS";}' \
 	'{"enabled" = 1;"name" = "PDF";}' \
-	'{"enabled" = 1;"name" = "IMAGES";}' \
-	'{"enabled" = 0;"name" = "MENU_SPOTLIGHT_SUGGESTIONS";}' \
 	'{"enabled" = 0;"name" = "MENU_DEFINITION";}' \
+	'{"enabled" = 0;"name" = "DOCUMENTS";}' \
+	'{"enabled" = 0;"name" = "SPREADSHEETS";}' \
 	'{"enabled" = 0;"name" = "MESSAGES";}' \
 	'{"enabled" = 0;"name" = "CONTACT";}' \
 	'{"enabled" = 0;"name" = "EVENT_TODO";}' \
+	'{"enabled" = 0;"name" = "IMAGES";}' \
 	'{"enabled" = 0;"name" = "BOOKMARKS";}' \
 	'{"enabled" = 0;"name" = "MUSIC";}' \
 	'{"enabled" = 0;"name" = "MOVIES";}' \
 	'{"enabled" = 0;"name" = "FONTS";}' \
-	'{"enabled" = 0;"name" = "MENU_OTHER";}' \
-	'{"enabled" = 0;"name" = "SOURCE";}' \
-	'{"enabled" = 0;"name" = "MENU_WEBSEARCH";}'
+	'{"enabled" = 0;"name" = "MENU_OTHER";}'
 
 # Load new settings before rebuilding the index
-killall mds > /dev/null 2>&1
+sudo killall mds > /dev/null 2>&1
 
 # Make sure indexing is enabled for the main volume
 sudo mdutil -i on / > /dev/null
@@ -421,6 +431,40 @@ defaults write com.apple.SoftwareUpdate AutomaticCheckEnabled -bool true
 defaults write com.apple.SoftwareUpdate AutomaticDownload -int 1
 defaults write com.apple.SoftwareUpdate CriticalUpdateInstall -int 1
 
+# Check for software updates daily, not just once per week
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+
+# Allow the App Store to reboot machine on macOS updates
+defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
+
+###############################################################################
+# 📊 Activity Monitor
+###############################################################################
+
+# Show the main window when launching Activity Monitor
+defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
+
+# Visualize CPU usage in the Activity Monitor Dock icon
+defaults write com.apple.ActivityMonitor IconType -int 5
+
+# Show all processes in Activity Monitor
+defaults write com.apple.ActivityMonitor ShowCategory -int 0
+
+# Sort Activity Monitor results by CPU usage
+defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
+defaults write com.apple.ActivityMonitor SortDirection -int 0
+
+###############################################################################
+# 📝 TextEdit
+###############################################################################
+
+# Use plain text as default format in TextEdit
+defaults write com.apple.TextEdit RichText -int 0
+
+# Open and save files as UTF-8 in TextEdit
+defaults write com.apple.TextEdit PlainTextEncoding -int 4
+defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
+
 ###############################################################################
 # 🎚️ Others
 ###############################################################################
@@ -446,6 +490,15 @@ sudo scutil --set ComputerName $COMPUTER_NAME
 sudo scutil --set HostName $COMPUTER_NAME
 sudo scutil --set LocalHostName $COMPUTER_NAME
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string $COMPUTER_NAME
+
+# Disable new disks requests for Time Machine
+defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+
+# Auto-play videos when opened with QuickTime Player
+defaults write com.apple.QuickTimePlayerX MGPlayMovieOnOpen -bool true
+
+# Prevent Photos from opening automatically when devices are plugged in
+defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 # Disable Wake for Wi-Fi network / Wake on Demand (more info: https://apple.stackexchange.com/questions/73764/what-is-the-wake-for-wifi-network-access-setting-in-energy-preferences)
 
