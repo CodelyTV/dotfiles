@@ -21,7 +21,7 @@ source $DOTFILES_PATH/terminal/init.sh
 fpath=("$DOTFILES_PATH/terminal/zsh/themes" "$DOTFILES_PATH/terminal/zsh/completions" $fpath)
 
 autoload -Uz promptinit && promptinit
-prompt rafa
+prompt codelytv
 
 # iTerm tab name
 # precmd() {
