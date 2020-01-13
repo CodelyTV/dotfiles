@@ -12,4 +12,4 @@ source "$DOTFILES_PATH/scripts/core/_main.sh"
 
 docs::eval "$@"
 
-find . -name ".git"| parallel \'cd {}/.. && echo `pwd` && git reset-permissions\'
+find . -name ".git"| parallel 'cd {}/.. && echo `pwd` && dot git reset-permissions'

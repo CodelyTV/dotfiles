@@ -12,4 +12,4 @@ source "$DOTFILES_PATH/scripts/core/_main.sh"
 
 docs::eval "$@"
 
-git diff -p -R --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
+git diff -p -R --no-color | grep -E "^(diff|(old|new) mode)" --color=never | git apply
