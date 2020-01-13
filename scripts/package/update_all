@@ -30,7 +30,9 @@ brew cleanup
 
 echo ''
 echo '♢ ZSH Zim'
-zsh ${ZIM_HOME}/tools/zim_update
+zsh ${ZIM_HOME}/tools/zim_update	zimfw upgrade
+zimfw update
+zimfw uninstall & zimfw install
 
 echo ''
 echo '♢ tldr'

@@ -21,10 +21,10 @@ docs::eval_help "$@"
 
 "$DOTFILES_PATH/bin/dot" self update
 
-if platform::is_macos; then
-  log::note "💻 Installing Zim Framework for ZSH"
-  source ~/.dotfiles/modules/zimfw/zimfw.zsh install
+log::note "💻 Installing Zim Framework for ZSH"
+source ~/.dotfiles/modules/zimfw/zimfw.zsh install
 
+if platform::is_macos; then
   log::note "🍎 Installing MacOS custom packages"
 
   read -rp "🌍 Network: Which name do you want to give to this computer? " network_computer_name
