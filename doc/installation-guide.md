@@ -10,6 +10,7 @@ Copy from the previous computer before The Shutdown™:
   * `~/.gnupg`
   * `~/Code`
 * Slack workspaces list
+* Copy Macos Keyboard shortcut preferences
 
 ## New computer
 
@@ -29,6 +30,17 @@ Copy from the previous computer before The Shutdown™:
   * Go to Security settings and allow it
   * `open ~/Library/QuickLook/QLColorCode.qlgenerator`
   * Go to Security settings and allow it
+* Open Google Backup and Sync
+  * Disable "USB Devices & SD Cards"
+  * Open the settings and configure them as follow:
+    * My Computer:
+      * Disable the backup of any folder
+      * Google Drive: Always remove both copies
+      * Google Photos: Disable the upload of newly added photos
+    * Google Drive:
+      * Enable selective sync from Google Drive to the computer
+    * Settings:
+      * Disable "Show warning when you remove…"
 * Open Dropbox
   * Login
   * Open settings:
@@ -58,17 +70,6 @@ Copy from the previous computer before The Shutdown™:
   * Add the work profile and sync
   * Authenticate all the extensions
   * For each profile: Go to History > Show Full History > Tabs from other devices > Open All
-* Open Google Backup and Sync
-  * Disable "USB Devices & SD Cards"
-  * Open the settings and configure them as follow:
-    * My Computer:
-      * Disable the backup of any folder
-      * Google Drive: Always remove both copies
-      * Google Photos: Disable the upload of newly added photos
-    * Google Drive:
-      * Enable selective sync from Google Drive to the computer
-    * Settings:
-      * Disable "Show warning when you remove…"
 * Open Magnet
   * Give permissions
   * Check Launch at login
@@ -147,6 +148,16 @@ Copy from the previous computer before The Shutdown™:
     * Open last image: `Cmd+Shift+Option+0`
   * Account: Sign in
   * Try to take a capture in order to trigger the permissions dialog
+* Open Transmit
+  * Apply license
+  * Open Preferences > Sync > Login > Override all data in this mac with server data
+* Open Firefox & enable Sync
+* Open Karabiner
+* Open Skype
+* Open Docker
+  * Set disk size depending on the machine disk capacity
+* Open Noti
+  * Preferences > Enable "Start Noti on System startup"
 * Open Bartender
   * Apply license
   * Menu Items:
@@ -157,11 +168,5 @@ Copy from the previous computer before The Shutdown™:
     * Search menu bar items: `Ctrl+Opt+]`
     * Keyboard navigate: `Ctrl+Opt+[`
 * Open MacOS Today drawer (next to the Notifications one) and disable everything except Weather
-* Open Transmit
-  * Apply license
-  * Open Preferences > Sync > Login > Override all data in this mac with server data
-* Open Firefox & enable Sync
-* Open Karabiner
-* Open Skype
 * Restart
 * Execute `dot shell zsh reload_completions` and then `compinit`
