@@ -125,9 +125,11 @@ The problem with the previous approach is that it could be a little verbose whil
     * Pro tip: If you already know the domain of the settings you're going to modify, optimize the size of the output specifying so: `defaults read com.apple.finder > finder_defaults_before_ui_changes.json`
 * Modify the settings through the UI
 * Save the output of the modified settings: `defaults read > defaults_after_ui_changes.json`
-    * Alternativelly: `defaults read com.apple.finder > finder_defaults_after_ui_changes.json`
+    * Alternatively: `defaults read com.apple.finder > finder_defaults_after_ui_changes.json`
 * Compare the `before` and `after` files to see what settings has been modified: `diff defaults_before_ui_changes.json defaults_after_ui_changes.json`
-    * Alternativelly: `diff finder_defaults_before_ui_changes finder_defaults_after_ui_changes.json`
+    * Alternatively: `diff finder_defaults_before_ui_changes.json finder_defaults_after_ui_changes.json`
+    * Pro tip: If the `diff` doesn't provide you enough context, you can run it with `diff -C 10` option to show 10 lines before and after each difference
+    * Pro tip 2: If the `diff` output is a mess for you, you can open it with VS Code with `code --diff finder_defaults_before_ui_changes.json finder_defaults_after_ui_changes.json`
 * Save the modified keys and construct your `write` commands in order to automate it the next time. For instance: `write com.apple.finder NewWindowTargetPath "file:///Users/your-username/"`
 
 ## ℹ️ About

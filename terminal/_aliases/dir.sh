@@ -7,7 +7,7 @@ alias tt="exa --tree --level=2 --long"
 # Jumps
 alias ~="cd ~"
 alias tmp="cd ~/Downloads/tmp"
-alias code='cd ~/Code'
+alias cdc='cd ~/Code'
 alias dotfiles="cd ~/.dotfiles"
-alias cdw="code; cd work"
-alias cdc="cdw; cd codelytv"
+alias cdw="cdc; cd work"
+alias cdy="cdw; cd codelytv"
