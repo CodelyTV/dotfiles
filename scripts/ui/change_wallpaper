@@ -36,9 +36,12 @@ elif [ -n "$WALLPAPER_FILENAME" ]; then
     echo "🌈 Choosing a random wallpaper between your favourites"
     WALLPAPER_FILE_PATH=$(find "$WALLPAPER_DIR"/* -maxdepth 0 ! -name "$(basename "$WALLPAPER_DIR/Colors/")" | shuf -n 1)
   elif [ -f "$WALLPAPER_FILE_PATH" ]; then
-    echo "👍 Nice one!"
+    echo "👍 Nice pic!"
+  elif [ -f "$COLOR_WALLPAPER_FILE_PATH" ]; then
+    echo "👍 Nice color!"
+    WALLPAPER_FILE_PATH="$COLOR_WALLPAPER_FILE_PATH"
   elif [ ! -f "$COLOR_WALLPAPER_FILE_PATH" ]; then
-    echo "🖌️ Painting a wallpaper full of $WALLPAPER_FILENAME in $COLOR_WALLPAPER_FILE_PATH"
+    echo "🖌️  Painting a wallpaper full of $WALLPAPER_FILENAME and saving it for further usage"
     WALLPAPER_COLOR=$WALLPAPER_FILENAME
 
     convert -size 128x128 xc:$WALLPAPER_COLOR $COLOR_WALLPAPER_FILE_PATH
