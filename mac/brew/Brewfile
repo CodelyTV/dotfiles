@@ -22,6 +22,7 @@ brew "libgcrypt"
 brew "gnupg"
 brew "gradle"
 brew "htop"
+brew "imagemagick", link: false
 brew "jq"
 brew "mariadb", restart_service: true
 brew "mas"
