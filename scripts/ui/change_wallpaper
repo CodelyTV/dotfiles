@@ -34,9 +34,7 @@ elif [ -n "$WALLPAPER_FILENAME" ]; then
 
   if [ "$WALLPAPER_FILENAME" == 'random_from_wallpapers_directory' ]; then
     echo "🌈 Choosing a random wallpaper between your favourites"
-    WALLPAPER_FILENAME=$(ls $WALLPAPER_DIR | grep -v / | xargs gshuf -n1 -e)
-
-    WALLPAPER_FILE_PATH="$WALLPAPER_DIR/$WALLPAPER_FILENAME"
+    WALLPAPER_FILE_PATH=$(find "$WALLPAPER_DIR"/* -maxdepth 0 ! -name "$(basename "$WALLPAPER_DIR/Colors/")" | shuf -n 1)
   elif [ -f "$WALLPAPER_FILE_PATH" ]; then
     echo "👍 Nice one!"
   elif [ ! -f "$COLOR_WALLPAPER_FILE_PATH" ]; then
@@ -51,6 +49,6 @@ fi
 
 echo "🚀 Changing wallpaper to $WALLPAPER_FILE_PATH"
 
-osascript -e 'tell application "System Events" to tell every desktop to set picture to "'$WALLPAPER_FILE_PATH'"'
+osascript -e 'tell application "System Events" to tell every desktop to set picture to "'"$WALLPAPER_FILE_PATH"'"'
 
 echo "✅ Enjoy!"
