@@ -4,3 +4,5 @@ terminal/zsh/**/**.zwc.old
 
 # Private Stuff
 /**/**/private-*
+
+/mac/karabiner-elements/automatic_backups
