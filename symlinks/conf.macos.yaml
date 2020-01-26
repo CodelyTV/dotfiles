@@ -11,7 +11,7 @@
     ~/Library/Application Support/Caret Beta/config/Keyboard Shortcuts.md: editors/caret/Keyboard Shortcuts.md
     ~/Library/Application Support/Caret Beta/config/Preferences.md: editors/caret/Preferences.md
     ~/Library/Application Support/Rocket/rocket.db: mac/rocket/rocket.db
-    ~/Pictures/Wallpapers: ~/Google Drive/📸 Photos/Wallpapers en uso
+    ~/.config/karabiner: mac/karabiner-elements
 
 - create:
     - ~/.hushlogin

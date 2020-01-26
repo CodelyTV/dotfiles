@@ -170,3 +170,5 @@ Copy from the previous computer before The Shutdown™:
 * Open MacOS Today drawer (next to the Notifications one) and disable everything except Weather
 * Restart
 * Execute `dot shell zsh reload_completions` and then `compinit`
+* Stop `mariadb` service making it to not start on system start up: `brew services stop mariadb`
+* Once the Google Drive folder has been sync: `ln -s ~/Pictures/Wallpapers ~/Google\ Drive/📸\ Photos/Wallpapers\ en\ uso/`
