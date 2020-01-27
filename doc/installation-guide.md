@@ -113,20 +113,21 @@ Copy from the previous computer before The Shutdown™:
       * No display
     * Search
       * Disable "Search with"
-      * Enable "Fast Search with: Right Command-<characters>"
+      * "Fast Search with:"
+          * Disable "Fn-<characters>"
+          * Enable "Fast Search with: Right Command-<characters>"
     * Command-Tab
-      * Enable "Typing characters starts Fast Search"
+      * Shortcut
+        * Command-Tab
+          * Minimized windows: Show at bottom
+          * Hidden windows: Show at bottom
+          * Apps without windows: Do not show
+        * Command-Backtip
+          * Show windows of: Active App
+          * Minimized windows: Show at bottom
+          * Hidden windows: Show at bottom
+          * Apps without windows: Do not show
       * Show: Neither
-      * Command-Tab
-        * Minimized windows: Show at bottom
-        * Hidden windows: Show at bottom
-        * Apps without windows: Do not show
-      * Disable Command-Backtip
-      * Enable Option-Tab
-        * Show windows of: Active App
-        * Minimized windows: Show at bottom
-        * Hidden windows: Show at bottom
-        * Apps without windows: Do not show
   * Open the license file in order to apply it
 * Open NTFS for Mac Installer
   * Go to the [license manager](https://my.paragon-software.com/#/dashboard/serial/activations)
