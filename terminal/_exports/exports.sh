@@ -3,7 +3,7 @@ GLOBAL_COMPOSER_PATH="$HOME/.composer"
 PYTHON_PATH='/usr/local/opt/python'
 RUBY_PATH='/usr/local/opt/ruby'
 
-export JAVA_HOME='/Library/Java/JavaVirtualMachines/amazon-corretto-8.jdk/Contents/Home'
+#export JAVA_HOME='/Library/Java/JavaVirtualMachines/amazon-corretto-8.jdk/Contents/Home'
 export GEM_HOME="$HOME/.gem"
 export GOPATH="$HOME/.go"
 
@@ -25,6 +25,24 @@ export NAVI_PATH="$DOTFILES_PATH/doc/navi"
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
+export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin
+# Add Visual Studio Code (code)
+
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+## Laravel Install Command
+
+export PATH="$PATH:~/.composer/vendor/bin"
+
+## Vue Cli
+
+export PATH="$PATH:/usr/local/Cellar/node/10.9.0/bin/"
+
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 paths=(
   "$HOME/bin"
   "$DOTFILES_PATH/bin"
