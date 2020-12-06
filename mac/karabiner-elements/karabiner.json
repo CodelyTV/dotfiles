@@ -155,15 +155,15 @@
                         ]
                     },
                     {
-                        "description": "[mouse] Up key -> Restore last hidden",
+                        "description": "[mouse] Down key -> Back",
                         "manipulators": [
                             {
                                 "from": {
-                                    "pointing_button": "button5"
+                                    "pointing_button": "button4"
                                 },
                                 "to": [
                                     {
-                                        "key_code": "tab",
+                                        "key_code": "open_bracket",
                                         "modifiers": [
                                             "left_command"
                                         ]
@@ -174,18 +174,15 @@
                         ]
                     },
                     {
-                        "description": "[mouse] Down key -> Hide",
+                        "description": "[mouse] Up key -> Forward",
                         "manipulators": [
                             {
                                 "from": {
-                                    "pointing_button": "button4"
+                                    "pointing_button": "button5"
                                 },
                                 "to": [
                                     {
-                                        "pointing_button": "button1"
-                                    },
-                                    {
-                                        "key_code": "h",
+                                        "key_code": "close_bracket",
                                         "modifiers": [
                                             "left_command"
                                         ]
@@ -888,6 +885,14 @@
                     "simple_modifications": [
                         {
                             "from": {
+                                "key_code": "grave_accent_and_tilde"
+                            },
+                            "to": {
+                                "key_code": "non_us_backslash"
+                            }
+                        },
+                        {
+                            "from": {
                                 "key_code": "non_us_backslash"
                             },
                             "to": {
@@ -896,13 +901,61 @@
                         },
                         {
                             "from": {
-                                "key_code": "grave_accent_and_tilde"
+                                "key_code": "right_alt"
                             },
                             "to": {
                                 "key_code": "non_us_backslash"
                             }
                         }
                     ]
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": false,
+                        "product_id": 591,
+                        "vendor_id": 1452
+                    },
+                    "ignore": false,
+                    "manipulate_caps_lock_led": true,
+                    "simple_modifications": [
+                        {
+                            "from": {
+                                "key_code": "right_control"
+                            },
+                            "to": {
+                                "key_code": "non_us_backslash"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": false,
+                        "product_id": 133,
+                        "vendor_id": 5426
+                    },
+                    "ignore": false,
+                    "manipulate_caps_lock_led": false,
+                    "simple_modifications": []
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": false,
+                    "fn_function_keys": [],
+                    "identifiers": {
+                        "is_keyboard": false,
+                        "is_pointing_device": true,
+                        "product_id": 133,
+                        "vendor_id": 5426
+                    },
+                    "ignore": false,
+                    "manipulate_caps_lock_led": false,
+                    "simple_modifications": []
                 }
             ],
             "fn_function_keys": [
@@ -1008,7 +1061,16 @@
                 "delay_milliseconds_before_open_device": 1000
             },
             "selected": true,
-            "simple_modifications": [],
+            "simple_modifications": [
+                {
+                    "from": {
+                        "key_code": "right_control"
+                    },
+                    "to": {
+                        "key_code": "non_us_backslash"
+                    }
+                }
+            ],
             "virtual_hid_keyboard": {
                 "caps_lock_delay_milliseconds": 0,
                 "country_code": 0,

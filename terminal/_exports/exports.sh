@@ -1,9 +1,9 @@
-PHP_PATH='/usr/local/opt/php@7.4'
+PHP_PATH='/usr/local/opt/php'
 GLOBAL_COMPOSER_PATH="$HOME/.composer"
 PYTHON_PATH='/usr/local/opt/python'
 RUBY_PATH='/usr/local/opt/ruby'
 
-export JAVA_HOME='/Library/Java/JavaVirtualMachines/amazon-corretto-8.jdk/Contents/Home'
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/amazon-corretto-15.jdk/Contents/Home'
 export GEM_HOME="$HOME/.gem"
 export GOPATH="$HOME/.go"
 
@@ -36,6 +36,8 @@ paths=(
   "$GEM_HOME/bin"
   "$PYTHON_PATH/libexec/bin"
   "$GLOBAL_COMPOSER_PATH/vendor/bin"
+  "$HOME/.yarn/bin"
+  "$HOME/.config/yarn/global/node_modules/.bin"
   "/bin"
   "/usr/local/bin" # This contains Brew ZSH. If it's below `/bin` it won't be executed.
   "/usr/local/opt/make/libexec/gnubin"
