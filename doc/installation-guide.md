@@ -22,7 +22,7 @@ Copy from the previous computer before The Shutdown™:
 * Execute the dotfiles installer:
   * `bash <(curl -s https://raw.githubusercontent.com/codelytv/dotfiles/master/installer)`
   * If any dialog appears regarding to not being able to install something, check in "System Preferences… > Security & Privacy" if you have to manually approve it.
-  * If there's any error and you want to execute again the cloned dotfiles:
+  * If there's any error, and you want to execute again the cloned dotfiles:
      1. `export DOTFILES_PATH="$HOME/.dotfiles"`
      2. `.dotfiles/bin/dot" self install` 
 * Give permission to Finder Quick Look plugins
@@ -32,7 +32,7 @@ Copy from the previous computer before The Shutdown™:
   * Go to Security settings and allow it
 * Open Google Backup and Sync
   * Disable "USB Devices & SD Cards"
-  * Open the settings and configure them as follow:
+  * Open the settings and configure them as follows:
     * My Computer:
       * Disable the backup of any folder
       * Google Drive: Always remove both copies
@@ -129,10 +129,6 @@ Copy from the previous computer before The Shutdown™:
           * Apps without windows: Do not show
       * Show: Neither
   * Open the license file in order to apply it
-* Open NTFS for Mac Installer
-  * Go to the [license manager](https://my.paragon-software.com/#/dashboard/serial/activations)
-  * Release the license from the legacy PC
-  * Apply the license to the new PC
 * Check Energy Saver preferences and disable menu bar icon
 * Check Date and Time preferences and disable menu bar icon
 * Open iStats
