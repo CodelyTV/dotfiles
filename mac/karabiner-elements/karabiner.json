@@ -888,18 +888,18 @@
                     "simple_modifications": [
                         {
                             "from": {
-                                "key_code": "non_us_backslash"
+                                "key_code": "grave_accent_and_tilde"
                             },
                             "to": {
-                                "key_code": "grave_accent_and_tilde"
+                                "key_code": "non_us_backslash"
                             }
                         },
                         {
                             "from": {
-                                "key_code": "grave_accent_and_tilde"
+                                "key_code": "non_us_backslash"
                             },
                             "to": {
-                                "key_code": "non_us_backslash"
+                                "key_code": "grave_accent_and_tilde"
                             }
                         }
                     ]

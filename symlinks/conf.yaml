@@ -16,7 +16,6 @@
     ~/.gitconfig: git/.gitconfig
     ~/.gitignore_global: git/.gitignore_global
     ~/.gitattributes: git/.gitattributes
-    ~/.vimrc: editors/vim/.vimrc
     ~/.config/psysh/config.php: langs/php/psysh-config.php
     ~/.composer/composer.json: langs/php/composer.json
     ~/.sbt/1.0/plugins/plugins.sbt: langs/scala/plugins.sbt

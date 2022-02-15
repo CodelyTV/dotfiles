@@ -36,3 +36,7 @@ alias cdp='cd Proyectos'                              # Proyectos:            Cl
 
 alias ll='ls -l'
 alias la='ls -la'
+
+alias ys='yarn start'
+alias nrs='npm run serve'
+alias nrd='npm run dev'
